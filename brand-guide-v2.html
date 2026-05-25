@@ -1,0 +1,2014 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Groov.ia — Brand Guide V.2 · regras estritas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&amp;family=Geist:wght@300;400;500;600;700&amp;family=Geist+Mono:wght@400;500;600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="brand-guide.css">
+<style>
+/* ─── V.2 strict rules additions ─────────────────────────── */
+.rules-block { max-width: var(--maxw); margin: 80px auto 0; }
+.rules-block .rb-head {
+  display: flex; align-items: baseline; gap: 16px;
+  border-top: 1px solid currentColor; padding-top: 18px;
+  margin-bottom: 28px; opacity: .96;
+}
+.rules-block .rb-head .rb-num {
+  font-family: 'Geist Mono', monospace; font-size: 11px;
+  letter-spacing: .08em; text-transform: uppercase; opacity: .55;
+}
+.rules-block .rb-head h3 {
+  margin: 0; font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500; font-size: 28px; letter-spacing: -0.02em;
+}
+.rules-block .rb-lede {
+  font-family: 'Geist', sans-serif; font-size: 14px; line-height: 1.5;
+  max-width: 64ch; opacity: .7; margin: -16px 0 28px;
+}
+
+/* role cards ── one per color */
+.role-cards {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px;
+  margin-bottom: 56px;
+}
+.role-card {
+  position: relative; padding: 22px 22px 24px;
+  border: 1px solid rgba(244,242,238,.1);
+  display: flex; flex-direction: column; gap: 14px;
+  min-height: 360px;
+}
+.role-card .rc-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.role-card .rc-chip i {
+  display: inline-block; width: 14px; height: 14px;
+  border: 1px solid rgba(244,242,238,.18);
+}
+.role-card .rc-name {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600; font-size: 30px; line-height: .95;
+  letter-spacing: -0.02em;
+}
+.role-card .rc-name em {
+  font-family: 'Instrument Serif', serif; font-style: italic;
+  font-weight: 400;
+}
+.role-card .rc-theme {
+  font-family: 'Geist Mono', monospace; font-size: 11px;
+  letter-spacing: .04em; text-transform: uppercase;
+  padding: 6px 9px; align-self: flex-start;
+  border: 1px solid currentColor;
+}
+.role-card .rc-list {
+  list-style: none; padding: 0; margin: auto 0 0;
+  display: flex; flex-direction: column; gap: 6px;
+  font-family: 'Geist', sans-serif; font-size: 13px; line-height: 1.4;
+}
+.role-card .rc-list li {
+  display: grid; grid-template-columns: 14px 1fr; gap: 8px;
+  align-items: baseline;
+}
+.role-card .rc-list .ok::before { content: '✓'; color: currentColor; }
+.role-card .rc-list .no::before { content: '×'; opacity: .6; }
+.role-card .rc-list .no { opacity: .55; text-decoration: line-through; text-decoration-thickness: 1px; text-underline-offset: 2px;}
+.role-card .rc-ratio {
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  letter-spacing: .08em; opacity: .7;
+}
+
+.role-card.r-noir   { background: var(--noir);   color: var(--bone); }
+.role-card.r-violet { background: var(--violet); color: var(--bone); }
+.role-card.r-neon   { background: var(--neon);   color: var(--noir); }
+.role-card.r-bone   { background: var(--bone);   color: var(--noir); border-color: rgba(10,10,10,.1); }
+
+/* pair matrix */
+.pair-matrix {
+  border: 1px solid rgba(244,242,238,.1);
+  display: grid; grid-template-columns: 160px repeat(4, 1fr);
+  margin-bottom: 56px;
+}
+.pair-matrix .pm-cell {
+  padding: 14px 16px; min-height: 70px;
+  border-right: 1px solid rgba(244,242,238,.08);
+  border-bottom: 1px solid rgba(244,242,238,.08);
+  display: flex; flex-direction: column; gap: 4px;
+  font-family: 'Geist Mono', monospace; font-size: 11px;
+  position: relative; justify-content: center;
+}
+.pair-matrix .pm-cell:nth-child(5n) { border-right: 0; }
+.pair-matrix .pm-cell.head {
+  background: rgba(244,242,238,.04);
+  text-transform: uppercase; letter-spacing: .08em;
+  font-size: 10px; opacity: .8;
+}
+.pair-matrix .pm-cell.head .pm-dot {
+  width: 12px; height: 12px; border: 1px solid rgba(244,242,238,.2);
+  display: inline-block; margin-right: 6px; vertical-align: middle;
+}
+.pair-matrix .pm-cell.row-label {
+  background: rgba(244,242,238,.02);
+  text-transform: uppercase; letter-spacing: .08em;
+  font-size: 10px; opacity: .8;
+}
+.pair-matrix .pm-status {
+  font-family: 'Geist Mono', monospace; font-size: 18px;
+  font-weight: 600; letter-spacing: 0;
+}
+.pair-matrix .pm-status.ok    { color: var(--neon); }
+.pair-matrix .pm-status.warn  { color: #ffb84d; }
+.pair-matrix .pm-status.no    { color: #ff5560; }
+.pair-matrix .pm-note {
+  font-size: 10px; opacity: .5; letter-spacing: 0; text-transform: none;
+}
+
+/* context ratio rows */
+.context-ratios { display: flex; flex-direction: column; gap: 18px; margin-bottom: 56px; }
+.ctx-row { display: grid; grid-template-columns: 220px 1fr 280px; gap: 24px; align-items: center; }
+.ctx-row .ctx-name {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500;
+  font-size: 18px; letter-spacing: -0.01em;
+}
+.ctx-row .ctx-name span {
+  display: block; font-family: 'Geist Mono', monospace;
+  font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
+  opacity: .55; margin-top: 4px; font-weight: 400;
+}
+.ctx-row .ctx-bar {
+  display: flex; height: 28px; overflow: hidden;
+  border: 1px solid rgba(244,242,238,.08);
+}
+.ctx-row .ctx-bar > span {
+  display: flex; align-items: center; padding: 0 10px;
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  letter-spacing: .04em; min-width: 0; white-space: nowrap;
+  overflow: hidden;
+}
+.ctx-row .ctx-note {
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  opacity: .55; letter-spacing: .04em; text-transform: uppercase;
+}
+
+/* forbidden chips */
+.forbid-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+}
+.forbid-cell {
+  border: 1px solid rgba(244,242,238,.08); padding: 18px;
+  display: flex; flex-direction: column; gap: 12px; min-height: 160px;
+}
+.forbid-cell .fc-tag {
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  letter-spacing: .08em; text-transform: uppercase; opacity: .55;
+}
+.forbid-cell .fc-demo {
+  flex: 1; display: flex; align-items: center; justify-content: center;
+  position: relative; min-height: 80px; overflow: hidden;
+}
+.forbid-cell .fc-demo::after {
+  content: ''; position: absolute; inset: 12px;
+  background:
+    linear-gradient(135deg, transparent 49.5%, #ff5560 49.5%, #ff5560 50.5%, transparent 50.5%),
+    linear-gradient(45deg, transparent 49.5%, #ff5560 49.5%, #ff5560 50.5%, transparent 50.5%);
+  pointer-events: none; opacity: .85;
+}
+.forbid-cell .fc-text {
+  font-family: 'Geist', sans-serif; font-size: 13px; line-height: 1.4;
+}
+.forbid-cell .fc-text b { font-weight: 600; }
+
+/* ─── graphic-element usage rules ─────────────────────────── */
+.usage-table {
+  border-top: 1px solid rgba(244,242,238,.1);
+}
+.usage-row {
+  display: grid; grid-template-columns: 100px 160px 1.2fr 1fr 1fr;
+  border-bottom: 1px solid rgba(244,242,238,.06);
+  align-items: stretch; min-height: 96px;
+}
+.usage-row > div {
+  padding: 14px 16px; display: flex; align-items: center;
+  border-right: 1px solid rgba(244,242,238,.04);
+}
+.usage-row > div:last-child { border-right: 0; }
+.usage-row .u-glyph {
+  justify-content: center; background: rgba(244,242,238,.02);
+}
+.usage-row .u-glyph svg, .usage-row .u-glyph .uel { width: 56px; height: 56px; }
+.usage-row .u-name {
+  flex-direction: column; align-items: flex-start; gap: 4px;
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500;
+  font-size: 17px;
+}
+.usage-row .u-name span {
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  letter-spacing: .08em; text-transform: uppercase; opacity: .55;
+  font-weight: 400;
+}
+.usage-row .u-text {
+  font-family: 'Geist', sans-serif; font-size: 13px; line-height: 1.45;
+}
+.usage-row .u-allow, .usage-row .u-deny {
+  flex-direction: column; gap: 6px; align-items: flex-start;
+  font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.4;
+}
+.usage-row .u-allow span::before { content: '✓ '; color: var(--neon); }
+.usage-row .u-deny  span::before { content: '× '; color: #ff5560; }
+.usage-row .u-deny  span { opacity: .65; }
+.usage-row.head {
+  background: rgba(244,242,238,.04); min-height: auto;
+  border-bottom: 1px solid rgba(244,242,238,.1);
+}
+.usage-row.head > div {
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  letter-spacing: .08em; text-transform: uppercase; opacity: .75;
+  padding: 10px 16px;
+}
+
+/* mini icons for usage table */
+.uel { display: block; position: relative; }
+.uel-dot { width: 24px !important; height: 24px !important; border-radius: 50%; background: var(--violet); margin: auto; }
+.uel-bar { width: 56px !important; height: 12px !important; background: var(--neon); margin: auto; }
+.uel-dia { width: 32px !important; height: 32px !important; background: var(--violet); transform: rotate(45deg); margin: auto; }
+.uel-tri { width: 0 !important; height: 0 !important; border-left: 22px solid transparent; border-right: 22px solid transparent; border-bottom: 38px solid var(--neon); margin: auto; }
+.uel-ring { width: 44px !important; height: 44px !important; border: 6px solid var(--violet); border-radius: 50%; margin: auto; }
+.uel-half { width: 56px !important; height: 28px !important; background: var(--bone); border-radius: 56px 56px 0 0; margin: auto; }
+.uel-px { width: 56px !important; height: 56px !important; margin: auto; }
+
+/* anatomy panel */
+.anatomy {
+  border: 1px solid rgba(244,242,238,.1);
+  padding: 28px; margin-bottom: 56px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+}
+.anatomy .an-stage {
+  position: relative; background: var(--noir);
+  border: 1px solid rgba(244,242,238,.06);
+  min-height: 280px; padding: 24px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.anatomy .an-stage .an-tag {
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  color: var(--bone); opacity: .55; letter-spacing: .08em;
+}
+.anatomy .an-stage .an-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500;
+  font-size: 30px; color: var(--bone); line-height: 1.05;
+  letter-spacing: -0.02em; max-width: 8ch;
+}
+.anatomy .an-stage .an-title em {
+  font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400;
+}
+.anatomy .an-stage .an-cluster {
+  position: absolute; top: 16px; right: 16px;
+  width: 60px; height: 60px;
+}
+.anatomy .an-stage .an-cluster svg { width: 100%; height: 100%; fill: var(--neon); }
+.anatomy .an-stage .an-foot {
+  font-family: 'Geist Mono', monospace; font-size: 10px;
+  color: var(--bone); opacity: .55;
+  display: flex; justify-content: space-between;
+}
+.anatomy .an-callouts {
+  display: flex; flex-direction: column; gap: 12px;
+  font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 1.5;
+}
+.anatomy .an-callouts .ac-line {
+  display: grid; grid-template-columns: 28px 90px 1fr; gap: 12px;
+  align-items: flex-start;
+  border-bottom: 1px dashed rgba(244,242,238,.1); padding-bottom: 12px;
+}
+.anatomy .an-callouts .ac-num {
+  font-weight: 600; color: var(--neon); font-size: 12px;
+}
+.anatomy .an-callouts .ac-label {
+  text-transform: uppercase; letter-spacing: .04em; opacity: .8;
+}
+.anatomy .an-callouts .ac-rule { opacity: .65; font-size: 11px; }
+
+/* legend for marcadores */
+.marker-rules {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+  margin-bottom: 56px;
+}
+.mr-cell {
+  border: 1px solid rgba(244,242,238,.08); padding: 18px 20px;
+  display: grid; grid-template-columns: 120px 1fr; gap: 18px; align-items: start;
+}
+.mr-cell .mr-glyph {
+  font-family: 'Geist Mono', monospace; font-size: 22px;
+  letter-spacing: 0; line-height: 1;
+  padding: 14px 0; text-align: center;
+  border: 1px dashed rgba(244,242,238,.18);
+  color: var(--neon);
+}
+.mr-cell .mr-body { display: flex; flex-direction: column; gap: 6px; }
+.mr-cell .mr-title {
+  font-family: 'Bricolage Grotesque', sans-serif; font-weight: 500;
+  font-size: 16px;
+}
+.mr-cell .mr-rule {
+  font-family: 'Geist', sans-serif; font-size: 12.5px;
+  line-height: 1.45; opacity: .75;
+}
+.mr-cell .mr-eg {
+  font-family: 'Geist Mono', monospace; font-size: 10.5px;
+  letter-spacing: .04em; padding: 4px 0; opacity: .55;
+  border-top: 1px dashed rgba(244,242,238,.1); margin-top: 4px;
+}
+
+/* ─── light variants for bone sections ────────────────── */
+.band-bone .rules-block .rb-head { border-color: rgba(10,10,10,.2); }
+.band-bone .role-card { border-color: rgba(10,10,10,.1); }
+.band-bone .role-card .rc-chip i { border-color: rgba(10,10,10,.15); }
+.band-bone .pair-matrix { border-color: rgba(10,10,10,.1); }
+.band-bone .pair-matrix .pm-cell { border-color: rgba(10,10,10,.06); }
+.band-bone .pair-matrix .pm-cell.head { background: rgba(10,10,10,.04); }
+.band-bone .pair-matrix .pm-cell.row-label { background: rgba(10,10,10,.02); }
+.band-bone .usage-table { border-color: rgba(10,10,10,.1); }
+.band-bone .usage-row { border-color: rgba(10,10,10,.06); }
+.band-bone .usage-row > div { border-color: rgba(10,10,10,.04); }
+.band-bone .usage-row .u-glyph { background: rgba(10,10,10,.02); }
+.band-bone .usage-row.head { background: rgba(10,10,10,.04); border-color: rgba(10,10,10,.1); }
+.band-bone .anatomy { border-color: rgba(10,10,10,.1); }
+.band-bone .forbid-cell { border-color: rgba(10,10,10,.08); }
+.band-bone .mr-cell { border-color: rgba(10,10,10,.08); }
+.band-bone .mr-cell .mr-glyph { border-color: rgba(10,10,10,.2); color: var(--violet); }
+.band-bone .mr-cell .mr-eg { border-color: rgba(10,10,10,.1); }
+</style>
+</head>
+<body class="dark" style="">
+
+<!-- ──────────────────────────────────────────────────────────────────
+     NAV (sticky chips)
+─────────────────────────────────────────────────────────────────── -->
+<nav class="nav" data-screen-label="nav">
+  <a class="nav-mark" href="#cover">
+    <svg viewBox="0 0 490.39 139.55" aria-label="Groov.ia"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+  </a>
+  <div class="nav-chips">
+    <a href="#essence">essence</a>
+    <a href="#logo">logo</a>
+    <a href="#color">color</a>
+    <a href="#type">type</a>
+    <a href="#system">system</a>
+    <a href="#social">social</a>
+    <a href="#slides">slides</a>
+  </div>
+  <span class="nav-meta">BRANDBOOK V.2 · 2026</span>
+</nav>
+
+<!-- Reusable SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <!-- Grain / noise filter for backgrounds + pill surfaces -->
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" seed="3"></feTurbulence>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .8 0"></feColorMatrix>
+    </filter>
+    <symbol id="groovia-mark" viewBox="0 0 490.39 139.55">
+      <g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle>
+    </symbol>
+
+    <!-- Pixel cluster doodles (tetris-like) -->
+    <symbol id="px-1" viewBox="0 0 60 60"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></symbol>
+    <symbol id="px-2" viewBox="0 0 80 60"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></symbol>
+    <symbol id="px-3" viewBox="0 0 80 80"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></symbol>
+    <symbol id="px-4" viewBox="0 0 60 60"><rect x="0" y="0" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="0" y="40" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect></symbol>
+    <symbol id="px-5" viewBox="0 0 100 40"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></symbol>
+    <symbol id="px-6" viewBox="0 0 80 80"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="60" y="0" width="20" height="20"></rect><rect x="0" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></symbol>
+  </defs>
+</svg>
+
+<!-- ──────────────────────────────────────────────────────────────────
+     01 · COVER
+─────────────────────────────────────────────────────────────────── -->
+<section id="cover" class="cover" data-screen-label="01 Cover">
+  <div class="cover-grid">
+    <div class="cover-tag mono">[ BRANDBOOK · V.2 · 2026 · regras estritas ]</div>
+    <div class="cover-tag mono right">groov.ia / sistema visual</div>
+
+    <h1 class="cover-title">
+      <span class="row">opera</span>
+      <span class="row"><em>AI‑first</em></span>
+      <span class="row">com método.</span>
+    </h1>
+
+    <div class="cover-mark">
+      <svg viewBox="0 0 490.39 139.55" class="logo-xl"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+    </div>
+
+    <div class="cover-meta mono">
+      <div><span class="dim">/01</span> essence</div>
+      <div><span class="dim">/02</span> logo</div>
+      <div><span class="dim">/03</span> color</div>
+      <div><span class="dim">/04</span> type</div>
+      <div><span class="dim">/05</span> system</div>
+      <div><span class="dim">/06</span> social</div>
+      <div><span class="dim">/07</span> slides</div>
+    </div>
+
+    <div class="cover-stamp">
+      <div class="stamp-circle">
+        <svg viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="circ" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0"></path></defs>
+          <text class="mono"><textPath href="#circ">groov.ia · brand system · v.1 · 2026 · ai-first operations · </textPath></text>
+        </svg>
+        <span class="stamp-core">G·IA</span>
+      </div>
+    </div>
+
+    <!-- decorative pixel clusters -->
+    <svg class="cover-px a" viewBox="0 0 60 60"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+    <svg class="cover-px b" viewBox="0 0 80 60"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></svg>
+    <svg class="cover-px c" viewBox="0 0 80 80"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
+  </div>
+</section>
+
+<!-- ──────────────────────────────────────────────────────────────────
+     02 · ESSENCE / MANIFESTO
+─────────────────────────────────────────────────────────────────── -->
+<section id="essence" class="band band-bone" data-screen-label="02 Essence">
+  <header class="band-head">
+    <span class="section-num mono">/01 · essence</span>
+    <h2 class="section-h">manifesto</h2>
+  </header>
+
+  <div class="essence-grid">
+    <p class="essence-lead">
+      Groov.ia estrutura a sua estratégia, implementa a execução com
+      <em>agentes de IA</em> e treina seu time para liderar humanos e
+      agentes no mesmo ritmo.
+    </p>
+    <aside class="essence-side mono">
+      <div class="kv"><span class="dim">posicionamento</span><span>AI-first operations</span></div>
+      <div class="kv"><span class="dim">promessa</span><span>90 dias · método · eficiência</span></div>
+      <div class="kv"><span class="dim">tom</span><span>técnico · ousado · direto</span></div>
+      <div class="kv"><span class="dim">audiência</span><span>líderes de operações</span></div>
+    </aside>
+
+    <div class="essence-pillars">
+      <article class="pillar">
+        <span class="p-num mono">01</span>
+        <h3>Estratégia</h3>
+        <p>Mapeamos onde IA cria alavanca real — não onde ela cabe.</p>
+      </article>
+      <article class="pillar">
+        <span class="p-num mono">02</span>
+        <h3>Execução</h3>
+        <p>Implementamos Claude e agentes com handoffs humanos claros.</p>
+      </article>
+      <article class="pillar">
+        <span class="p-num mono">03</span>
+        <h3>Treino</h3>
+        <p>Capacitamos times para liderar pessoas e agentes na mesma cadência.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────────────────────────────────────────────────
+     03 · LOGO SYSTEM
+─────────────────────────────────────────────────────────────────── -->
+<section id="logo" class="band band-noir" data-screen-label="03 Logo">
+  <header class="band-head">
+    <span class="section-num mono">/02 · logo</span>
+    <h2 class="section-h">marca</h2>
+  </header>
+
+  <div class="logo-hero">
+    <svg viewBox="0 0 490.39 139.55" class="logo-jumbo"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+    <div class="logo-callout mono">
+      <span class="dim">↑ marca principal · wordmark + dot accent</span>
+    </div>
+  </div>
+
+  <div class="logo-grid">
+    <div class="logo-card on-violet">
+      <svg viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+      <div class="card-label mono"><span>01 · positiva</span><span>violet bg</span></div>
+    </div>
+    <div class="logo-card on-noir">
+      <svg viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+      <div class="card-label mono"><span>02 · monocromática</span><span>noir bg</span></div>
+    </div>
+    <div class="logo-card on-bone">
+      <svg viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+      <div class="card-label mono"><span>03 · contraste claro</span><span>bone bg</span></div>
+    </div>
+    <div class="logo-card on-neon">
+      <svg viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+      <div class="card-label mono"><span>04 · energia</span><span>neon bg</span></div>
+    </div>
+  </div>
+
+  <div class="logo-tech">
+    <div class="tech-card">
+      <h4 class="mono dim">clearspace</h4>
+      <div class="clearspace">
+        <div class="cs-frame">
+          <svg viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+          <span class="cs-x cs-top">x</span>
+          <span class="cs-x cs-right">x</span>
+          <span class="cs-x cs-bottom">x</span>
+          <span class="cs-x cs-left">x</span>
+        </div>
+      </div>
+      <p class="tech-note">x = altura do dot accent. Mínimo em qualquer lado da marca.</p>
+    </div>
+
+    <div class="tech-card">
+      <h4 class="mono dim">tamanho mínimo</h4>
+      <div class="minsize">
+        <div class="ms-row"><svg viewBox="0 0 490.39 139.55" style="height:14px"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg><span class="mono dim">14px / 4mm · digital</span></div>
+        <div class="ms-row"><svg viewBox="0 0 490.39 139.55" style="height:24px"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg><span class="mono dim">24px / 7mm · referência</span></div>
+        <div class="ms-row"><svg viewBox="0 0 490.39 139.55" style="height:40px"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg><span class="mono dim">40px / 12mm · headline</span></div>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <h4 class="mono dim">não pode</h4>
+      <div class="donts">
+        <div class="dont"><div class="dont-canvas grad"><svg viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg></div><span class="mono">× gradientes</span></div>
+        <div class="dont"><div class="dont-canvas low"><svg viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg></div><span class="mono">× baixo contraste</span></div>
+        <div class="dont"><div class="dont-canvas stretch"><svg viewBox="0 0 490.39 139.55" preserveAspectRatio="none"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg></div><span class="mono">× distorcer</span></div>
+        <div class="dont"><div class="dont-canvas rot"><svg viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg></div><span class="mono">× rotacionar</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────────────────────────────────────────────────
+     04 · COLOR
+─────────────────────────────────────────────────────────────────── -->
+<section id="color" class="band band-noir" data-screen-label="04 Color">
+  <header class="band-head">
+    <span class="section-num mono">/03 · color</span>
+    <h2 class="section-h">paleta</h2>
+  </header>
+
+  <div class="palette">
+    <article class="swatch swatch-noir">
+      <span class="sw-tag mono">[ AUTORIDADE · institucional ]</span>
+      <div class="sw-name">Noir</div>
+      <div class="sw-codes mono">
+        <span>HEX  #0A0A0A</span>
+        <span>RGB  10 · 10 · 10</span>
+        <span>CMYK 0 · 0 · 0 · 96</span>
+        <span>papel  fundo dominante</span>
+      </div>
+    </article>
+    <article class="swatch swatch-violet">
+      <span class="sw-tag mono">[ IDENTIDADE · método ]</span>
+      <div class="sw-name">Violeta</div>
+      <div class="sw-codes mono">
+        <span>HEX  #6300FF</span>
+        <span>RGB  99 · 0 · 255</span>
+        <span>CMYK 61 · 100 · 0 · 0</span>
+        <span>papel  marca + método</span>
+      </div>
+    </article>
+    <article class="swatch swatch-neon">
+      <span class="sw-tag mono">[ AÇÃO · sinal positivo ]</span>
+      <div class="sw-name">Verde&nbsp;Neon</div>
+      <div class="sw-codes mono">
+        <span>HEX  #00FF7F</span>
+        <span>RGB  0 · 255 · 127</span>
+        <span>CMYK 80 · 0 · 75 · 0</span>
+        <span>papel  CTA · dado · ênfase</span>
+      </div>
+    </article>
+    <article class="swatch swatch-bone">
+      <span class="sw-tag mono">[ CLAREZA · leitura ]</span>
+      <div class="sw-name">Bone</div>
+      <div class="sw-codes mono">
+        <span>HEX  #F4F2EE</span>
+        <span>RGB  244 · 242 · 238</span>
+        <span>CMYK 4 · 4 · 7 · 0</span>
+        <span>papel  editorial · inversão</span>
+      </div>
+    </article>
+  </div>
+
+  <div class="color-system">
+    <h4 class="mono dim">combinações aprovadas</h4>
+    <div class="combos">
+      <div class="combo c1"><span class="mono">noir + violeta + neon</span><div class="dots"><i style="background:#0A0A0A"></i><i style="background:#6300FF"></i><i style="background:#00FF7F"></i></div></div>
+      <div class="combo c2"><span class="mono">violeta + bone + noir</span><div class="dots"><i style="background:#6300FF"></i><i style="background:#F4F2EE"></i><i style="background:#0A0A0A"></i></div></div>
+      <div class="combo c3"><span class="mono">noir + neon</span><div class="dots"><i style="background:#0A0A0A"></i><i style="background:#00FF7F"></i></div></div>
+      <div class="combo c4"><span class="mono">bone + violeta</span><div class="dots"><i style="background:#F4F2EE"></i><i style="background:#6300FF"></i></div></div>
+    </div>
+
+    <div class="ratio">
+      <h4 class="mono dim">proporção 60·25·10·5</h4>
+      <div class="ratio-bar">
+        <span class="rb noir" style="flex:60">60 · noir</span>
+        <span class="rb violet" style="flex:25">25 · violeta</span>
+        <span class="rb neon" style="flex:10">10 · neon</span>
+        <span class="rb bone" style="flex:5">5 · bone</span>
+      </div>
+      <p class="tech-note">Regra base. Em peças claras, inverter para bone-dominante mantendo a mesma proporção entre acentos.</p>
+    </div>
+  </div>
+
+  <!-- ── REGRAS ESTRITAS · COR ────────────────────────── -->
+
+  <div class="rules-block">
+    <div class="rb-head">
+      <span class="rb-num">/03.a · regras</span>
+      <h3>papel temático de cada cor</h3>
+    </div>
+    <p class="rb-lede">
+      Cada cor ocupa <em>um</em> papel no sistema. Trocar o papel quebra o reconhecimento da marca.
+      Nada de "neon decorativo" ou "violeta de fundo de relatório".
+    </p>
+
+    <div class="role-cards">
+      <article class="role-card r-noir">
+        <span class="rc-chip"><i style="background:#0A0A0A"></i> noir · #0A0A0A</span>
+        <span class="rc-theme">AUTORIDADE</span>
+        <div class="rc-name">institucional</div>
+        <ul class="rc-list">
+          <li class="ok">fundo dominante de peças formais</li>
+          <li class="ok">pitch deck · proposta · relatório</li>
+          <li class="ok">canvas onde a marca precisa "pesar"</li>
+          <li class="no">texto corrido longo (use bone)</li>
+          <li class="no">acento sobre violeta</li>
+        </ul>
+        <span class="rc-ratio">cota mín. · 50% · cota máx. · 80%</span>
+      </article>
+
+      <article class="role-card r-violet">
+        <span class="rc-chip"><i style="background:#6300FF"></i> violeta · #6300FF</span>
+        <span class="rc-theme">IDENTIDADE</span>
+        <div class="rc-name">o <em>método</em></div>
+        <ul class="rc-list">
+          <li class="ok">marcador de marca · dot do logo</li>
+          <li class="ok">divisores de seção · claims</li>
+          <li class="ok">slides de método · processo</li>
+          <li class="no">texto corrido (ilegível)</li>
+          <li class="no">junto a neon como acento duplo</li>
+        </ul>
+        <span class="rc-ratio">cota máx. · 30% · sempre 1 papel por peça</span>
+      </article>
+
+      <article class="role-card r-neon">
+        <span class="rc-chip"><i style="background:#00FF7F"></i> neon · #00FF7F</span>
+        <span class="rc-theme">AÇÃO</span>
+        <div class="rc-name">sinal positivo</div>
+        <ul class="rc-list">
+          <li class="ok">CTAs · números · dados em destaque</li>
+          <li class="ok">ênfase de <em>uma</em> palavra</li>
+          <li class="ok">marcadores de status "ok"</li>
+          <li class="no">fundo de peça inteira</li>
+          <li class="no">peça formal / institucional</li>
+          <li class="no">texto com mais de 6 palavras</li>
+        </ul>
+        <span class="rc-ratio">cota máx. · 15% · pontual e curto</span>
+      </article>
+
+      <article class="role-card r-bone">
+        <span class="rc-chip"><i style="background:#F4F2EE"></i> bone · #F4F2EE</span>
+        <span class="rc-theme">CLAREZA</span>
+        <div class="rc-name">editorial</div>
+        <ul class="rc-list">
+          <li class="ok">leitura longa · citações · whitepapers</li>
+          <li class="ok">fundo de peças leves / humanas</li>
+          <li class="ok">contraste de texto sobre noir/violeta</li>
+          <li class="no">como acento pequeno (some)</li>
+          <li class="no">combinada a neon como fg/bg</li>
+        </ul>
+        <span class="rc-ratio">cota livre quando líder · ≤8% quando suporte</span>
+      </article>
+    </div>
+  </div>
+
+  <div class="rules-block">
+    <div class="rb-head">
+      <span class="rb-num">/03.b · matriz</span>
+      <h3>combinações foreground × background</h3>
+    </div>
+    <p class="rb-lede">
+      Apenas estas combinações são aprovadas. <span style="color:var(--neon)">●</span> ok ·
+      <span style="color:#ffb84d">●</span> restrito (uso pontual com observação) ·
+      <span style="color:#ff5560">●</span> proibido.
+    </p>
+
+    <div class="pair-matrix">
+      <div class="pm-cell head">fg ↓ / bg →</div>
+      <div class="pm-cell head"><span class="pm-dot" style="background:#0A0A0A"></span>noir</div>
+      <div class="pm-cell head"><span class="pm-dot" style="background:#6300FF"></span>violeta</div>
+      <div class="pm-cell head"><span class="pm-dot" style="background:#00FF7F"></span>neon</div>
+      <div class="pm-cell head"><span class="pm-dot" style="background:#F4F2EE"></span>bone</div>
+
+      <div class="pm-cell row-label">noir</div>
+      <div class="pm-cell"><span class="pm-status no">×</span><span class="pm-note">sem contraste</span></div>
+      <div class="pm-cell"><span class="pm-status ok">✓</span><span class="pm-note">tags · números</span></div>
+      <div class="pm-cell"><span class="pm-status ok">✓</span><span class="pm-note">texto sobre CTA</span></div>
+      <div class="pm-cell"><span class="pm-status ok">✓</span><span class="pm-note">par editorial padrão</span></div>
+
+      <div class="pm-cell row-label">violeta</div>
+      <div class="pm-cell"><span class="pm-status warn">~</span><span class="pm-note">só headline · nunca corrido</span></div>
+      <div class="pm-cell"><span class="pm-status no">×</span><span class="pm-note">sem contraste</span></div>
+      <div class="pm-cell"><span class="pm-status no">×</span><span class="pm-note">vibração ilegível</span></div>
+      <div class="pm-cell"><span class="pm-status ok">✓</span><span class="pm-note">claim sobre bone</span></div>
+
+      <div class="pm-cell row-label">neon</div>
+      <div class="pm-cell"><span class="pm-status ok">✓</span><span class="pm-note">ênfase · número · cta</span></div>
+      <div class="pm-cell"><span class="pm-status no">×</span><span class="pm-note">vibração ilegível</span></div>
+      <div class="pm-cell"><span class="pm-status no">×</span><span class="pm-note">sem contraste</span></div>
+      <div class="pm-cell"><span class="pm-status no">×</span><span class="pm-note">baixíssimo contraste</span></div>
+
+      <div class="pm-cell row-label">bone</div>
+      <div class="pm-cell"><span class="pm-status ok">✓</span><span class="pm-note">texto corrido · titulo</span></div>
+      <div class="pm-cell"><span class="pm-status ok">✓</span><span class="pm-note">texto corrido · titulo</span></div>
+      <div class="pm-cell"><span class="pm-status warn">~</span><span class="pm-note">só headline curto</span></div>
+      <div class="pm-cell"><span class="pm-status no">×</span><span class="pm-note">sem contraste</span></div>
+    </div>
+  </div>
+
+  <div class="rules-block">
+    <div class="rb-head">
+      <span class="rb-num">/03.c · contexto</span>
+      <h3>proporção por tipo de peça</h3>
+    </div>
+    <p class="rb-lede">
+      A proporção 60·25·10·5 é o ponto de partida. Cada contexto reescala mantendo a hierarquia.
+    </p>
+
+    <div class="context-ratios">
+      <div class="ctx-row">
+        <div class="ctx-name">Institucional<span>pitch · proposta · relatório</span></div>
+        <div class="ctx-bar">
+          <span style="background:#0A0A0A;color:#F4F2EE;flex:70">70 · noir</span>
+          <span style="background:#6300FF;color:#F4F2EE;flex:20">20 · violeta</span>
+          <span style="background:#F4F2EE;color:#0A0A0A;flex:8">8 · bone</span>
+          <span style="background:#00FF7F;color:#0A0A0A;flex:2">2 · neon</span>
+        </div>
+        <div class="ctx-note">→ neon só em CTA final</div>
+      </div>
+
+      <div class="ctx-row">
+        <div class="ctx-name">Editorial<span>quote · whitepaper · longread</span></div>
+        <div class="ctx-bar">
+          <span style="background:#F4F2EE;color:#0A0A0A;flex:70">70 · bone</span>
+          <span style="background:#0A0A0A;color:#F4F2EE;flex:20">20 · noir</span>
+          <span style="background:#6300FF;color:#F4F2EE;flex:10">10 · violeta</span>
+        </div>
+        <div class="ctx-note">→ sem neon · clareza máxima</div>
+      </div>
+
+      <div class="ctx-row">
+        <div class="ctx-name">Lançamento<span>campanha · evento · convite</span></div>
+        <div class="ctx-bar">
+          <span style="background:#6300FF;color:#F4F2EE;flex:60">60 · violeta</span>
+          <span style="background:#0A0A0A;color:#F4F2EE;flex:25">25 · noir</span>
+          <span style="background:#00FF7F;color:#0A0A0A;flex:10">10 · neon</span>
+          <span style="background:#F4F2EE;color:#0A0A0A;flex:5">5 · bone</span>
+        </div>
+        <div class="ctx-note">→ violeta lidera · energia controlada</div>
+      </div>
+
+      <div class="ctx-row">
+        <div class="ctx-name">Dado / Resultado<span>stat · case · número</span></div>
+        <div class="ctx-bar">
+          <span style="background:#0A0A0A;color:#F4F2EE;flex:60">60 · noir</span>
+          <span style="background:#00FF7F;color:#0A0A0A;flex:30">30 · neon</span>
+          <span style="background:#F4F2EE;color:#0A0A0A;flex:10">10 · bone</span>
+        </div>
+        <div class="ctx-note">→ neon eleva o número, não a peça</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rules-block">
+    <div class="rb-head">
+      <span class="rb-num">/03.d · proibido</span>
+      <h3>nunca, em nenhuma hipótese</h3>
+    </div>
+    <p class="rb-lede">
+      Cinco proibições absolutas. Não há exceção editorial, criativa ou de campanha.
+    </p>
+
+    <div class="forbid-grid">
+      <div class="forbid-cell" style="background:#00FF7F;color:#0A0A0A">
+        <span class="fc-tag">/proibido · 01</span>
+        <div class="fc-demo" style="background:#00FF7F"></div>
+        <p class="fc-text"><b>Neon como fundo dominante.</b> Verde Neon é sinal, não superfície. Limite: 15% da área.</p>
+      </div>
+      <div class="forbid-cell" style="background:rgba(244,242,238,.04)">
+        <span class="fc-tag">/proibido · 02</span>
+        <div class="fc-demo" style="background:linear-gradient(90deg,#6300FF,#00FF7F)"></div>
+        <p class="fc-text"><b>Violeta + Neon em proximidade.</b> Dois acentos competem. Escolha apenas um acento por peça.</p>
+      </div>
+      <div class="forbid-cell" style="background:rgba(244,242,238,.04)">
+        <span class="fc-tag">/proibido · 03</span>
+        <div class="fc-demo" style="background:linear-gradient(135deg,#6300FF,#9d4dff,#0A0A0A)"></div>
+        <p class="fc-text"><b>Gradientes entre cores da paleta.</b> O sistema é por blocos chapados. Gradientes anulam o ritmo.</p>
+      </div>
+      <div class="forbid-cell" style="background:rgba(244,242,238,.04)">
+        <span class="fc-tag">/proibido · 04</span>
+        <div class="fc-demo" style="background:#00FF7F"><span style="font-family:'Geist',sans-serif;font-size:11px;color:#F4F2EE;position:relative;z-index:2;padding:4px 8px;background:rgba(0,0,0,.2)">texto bone sobre neon</span></div>
+        <p class="fc-text"><b>Bone sobre neon</b> (ou vice-versa). Contraste insuficiente, ilegível em qualquer escala.</p>
+      </div>
+      <div class="forbid-cell" style="background:rgba(244,242,238,.04)">
+        <span class="fc-tag">/proibido · 05</span>
+        <div class="fc-demo" style="background:#6300FF"><span style="font-family:'Geist',sans-serif;font-size:11px;color:#F4F2EE;position:relative;z-index:2;padding:4px 8px;line-height:1.4">parágrafo de texto corrido na cor violeta sobre fundo violeta…</span></div>
+        <p class="fc-text"><b>Cor de marca em texto corrido.</b> Violeta e Neon nunca são tipografia longa. Limite: 8 palavras.</p>
+      </div>
+      <div class="forbid-cell" style="background:rgba(244,242,238,.04)">
+        <span class="fc-tag">/proibido · 06</span>
+        <div class="fc-demo" style="background:hsl(280,80%,55%)"></div>
+        <p class="fc-text"><b>Variações da paleta.</b> Não clarear, escurecer, dessaturar ou criar tons intermediários. Os 4 valores são exatos.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ──────────────────────────────────────────────────────────────────
+     05 · TYPE
+─────────────────────────────────────────────────────────────────── -->
+<section id="type" class="band band-bone" data-screen-label="05 Type">
+  <header class="band-head">
+    <span class="section-num mono">/04 · type</span>
+    <h2 class="section-h">tipografia</h2>
+  </header>
+
+  <article class="type-card primary">
+    <div class="type-meta mono">
+      <span class="dim">display · variable</span>
+      <span class="dim">Google Fonts</span>
+    </div>
+    <h3 class="type-name">Bricolage Grotesque</h3>
+    <div class="type-spec mono">
+      <span>peso 300 — 800</span><span>opsz 12 — 96</span><span>uso  títulos · manchetes</span>
+    </div>
+    <div class="type-spec-row">
+      <div class="ts" style="font-weight:300">Aa</div>
+      <div class="ts" style="font-weight:500">Aa</div>
+      <div class="ts" style="font-weight:700">Aa</div>
+      <div class="ts" style="font-weight:800; font-stretch:75%">Aa</div>
+    </div>
+    <div class="type-show">opera AI‑first.</div>
+    <div class="type-glyphs">
+      <span>ABCDEFGHIJKLM</span>
+      <span>NOPQRSTUVWXYZ</span>
+      <span>abcdefghijklmnopqrstuvwxyz</span>
+      <span>0123456789 — “” / [ ] · &amp; ?</span>
+    </div>
+  </article>
+
+  <div class="type-pair">
+    <article class="type-card">
+      <div class="type-meta mono"><span class="dim">body · neutral</span><span class="dim">UI · longas</span></div>
+      <h3 class="type-name" style="font-family:'Geist'">Geist</h3>
+      <div class="type-spec mono"><span>300 / 400 / 500 / 600 / 700</span></div>
+      <p style="font-family:'Geist'; font-weight:400; font-size:17px; line-height:1.5; max-width:46ch">
+        Texto corrido, navegação, parágrafos. Geist carrega autoridade técnica sem
+        soar genérica. Use 400 para corrido e 500 para grifos.
+      </p>
+    </article>
+    <article class="type-card">
+      <div class="type-meta mono"><span class="dim">accent · editorial</span><span class="dim">só itálico</span></div>
+      <h3 class="type-name" style="font-family:'Instrument Serif'; font-style:italic; font-weight:400">Instrument Serif</h3>
+      <div class="type-spec mono"><span>uso  uma palavra · ênfase</span></div>
+      <p style="font-family:'Geist'; font-size:17px; line-height:1.5; max-width:46ch">
+        Reservada para uma única palavra em <em style="font-family:'Instrument Serif'; font-style:italic">ênfase</em>
+        dentro de uma headline. Quebra o ritmo grotesco.
+      </p>
+    </article>
+    <article class="type-card">
+      <div class="type-meta mono"><span class="dim">mono · técnico</span><span class="dim">tags · code</span></div>
+      <h3 class="type-name mono">Geist Mono</h3>
+      <div class="type-spec mono"><span>uso  brackets · timestamps · tags</span></div>
+      <p class="mono" style="font-size:14px; line-height:1.6; max-width:46ch">
+        [INDEX/05]  /04 · type<br>
+        [HASH]     #6300FF<br>
+        [STATUS]   AI-FIRST · OK
+      </p>
+    </article>
+  </div>
+
+  <div class="type-scale">
+    <h4 class="mono dim">escala</h4>
+    <div class="ts-row"><span class="mono dim">display · 120</span><span style="font-family:'Bricolage Grotesque'; font-weight:600; font-size:96px; line-height:.95">opera</span></div>
+    <div class="ts-row"><span class="mono dim">h1 · 64</span><span style="font-family:'Bricolage Grotesque'; font-weight:500; font-size:56px; line-height:1">opera AI-first</span></div>
+    <div class="ts-row"><span class="mono dim">h2 · 40</span><span style="font-family:'Bricolage Grotesque'; font-weight:500; font-size:36px; line-height:1.05">com método</span></div>
+    <div class="ts-row"><span class="mono dim">h3 · 24</span><span style="font-family:'Geist'; font-weight:600; font-size:22px">Estratégia · Execução · Treino</span></div>
+    <div class="ts-row"><span class="mono dim">body · 17</span><span style="font-family:'Geist'; font-size:17px">Texto corrido em parágrafos longos para narrativa.</span></div>
+    <div class="ts-row"><span class="mono dim">label · 12</span><span class="mono" style="font-size:12px; letter-spacing:.08em; text-transform:uppercase">[ /04 · type ]</span></div>
+  </div>
+</section>
+
+<!-- ──────────────────────────────────────────────────────────────────
+     06 · GRAPHIC SYSTEM
+─────────────────────────────────────────────────────────────────── -->
+<section id="system" class="band band-noir" data-screen-label="06 System">
+  <header class="band-head">
+    <span class="section-num mono">/05 · system</span>
+    <h2 class="section-h">elementos gráficos</h2>
+  </header>
+
+  <p class="section-lede">
+    O sistema é construído sobre uma <em>grade de 20</em>. Toda
+    forma é múltipla de 20px, encaixável, modular — o ritmo visual de operações AI-first.
+  </p>
+
+  <div class="sys-block">
+    <h4 class="mono dim">/01 pixel clusters · tetris doodles</h4>
+    <div class="px-library">
+      <div class="px-cell"><svg viewBox="0 0 60 60"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg><span class="mono">PX·01</span></div>
+      <div class="px-cell"><svg viewBox="0 0 80 60"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></svg><span class="mono">PX·02</span></div>
+      <div class="px-cell"><svg viewBox="0 0 80 80"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg><span class="mono">PX·03</span></div>
+      <div class="px-cell"><svg viewBox="0 0 60 60"><rect x="0" y="0" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="0" y="40" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect></svg><span class="mono">PX·04</span></div>
+      <div class="px-cell"><svg viewBox="0 0 100 40"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg><span class="mono">PX·05</span></div>
+      <div class="px-cell"><svg viewBox="0 0 80 80"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="60" y="0" width="20" height="20"></rect><rect x="0" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg><span class="mono">PX·06</span></div>
+    </div>
+  </div>
+
+  <div class="sys-block">
+    <h4 class="mono dim">/02 primitivos geométricos</h4>
+    <div class="geo-library">
+      <div class="geo-cell"><div class="geo geo-tri"></div><span class="mono">triângulo</span></div>
+      <div class="geo-cell"><div class="geo geo-dia"></div><span class="mono">diamante</span></div>
+      <div class="geo-cell"><div class="geo geo-half"></div><span class="mono">meio-disco</span></div>
+      <div class="geo-cell"><div class="geo geo-ring"></div><span class="mono">anel</span></div>
+      <div class="geo-cell"><div class="geo geo-dot"></div><span class="mono">dot</span></div>
+      <div class="geo-cell"><div class="geo geo-bar"></div><span class="mono">barra</span></div>
+    </div>
+  </div>
+
+  <div class="sys-block">
+    <h4 class="mono dim">/03 marcadores tipográficos</h4>
+    <div class="mark-library">
+      <div class="mark-cell mono">[ TIPO ]</div>
+      <div class="mark-cell mono">/04 · slash</div>
+      <div class="mark-cell mono">— em-dash</div>
+      <div class="mark-cell mono">+ plus</div>
+      <div class="mark-cell mono">·· dot pair</div>
+      <div class="mark-cell mono">↳ return</div>
+    </div>
+  </div>
+
+  <div class="sys-block">
+    <h4 class="mono dim">/04 grade base</h4>
+    <div class="grid-demo">
+      <div class="grid-bg"></div>
+      <svg class="grid-px gp1" viewBox="0 0 80 80"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
+      <svg class="grid-px gp2" viewBox="0 0 60 60"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+      <div class="grid-tri"></div>
+      <span class="grid-label mono">[ 20 · base unit ]</span>
+    </div>
+  </div>
+
+  <!-- ── REGRAS ESTRITAS · ELEMENTOS GRÁFICOS ────────── -->
+
+  <div class="rules-block">
+    <div class="rb-head">
+      <span class="rb-num">/05.a · anatomia</span>
+      <h3>como montar uma peça</h3>
+    </div>
+    <p class="rb-lede">
+      Toda peça segue a mesma anatomia: <em>tag · headline · cluster · footer</em>.
+      Três elementos visuais no máximo. Sem decoração extra.
+    </p>
+
+    <div class="anatomy">
+      <div class="an-stage">
+        <div class="an-tag">[ insight · 01 ]</div>
+        <svg class="an-cluster" viewBox="0 0 60 60"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+        <div class="an-title">opera <em>AI-first</em> com método.</div>
+        <div class="an-foot"><span>@groov.ia</span><span>/01</span></div>
+      </div>
+
+      <div class="an-callouts">
+        <div class="ac-line">
+          <span class="ac-num">01</span>
+          <span class="ac-label">tag superior</span>
+          <span class="ac-rule">Sempre <code>[ tipo · número ]</code> em mono. Topo-esquerda. 10–11 px.</span>
+        </div>
+        <div class="ac-line">
+          <span class="ac-num">02</span>
+          <span class="ac-label">cluster</span>
+          <span class="ac-rule">Pixel cluster (PX·01–06) em UM canto. Cor de acento permitida no fundo. Nunca centro.</span>
+        </div>
+        <div class="ac-line">
+          <span class="ac-num">03</span>
+          <span class="ac-label">headline</span>
+          <span class="ac-rule">Bricolage Grotesque 500–600. Uma palavra em <em>Instrument Serif</em> itálico. Máx. 3 linhas.</span>
+        </div>
+        <div class="ac-line">
+          <span class="ac-num">04</span>
+          <span class="ac-label">footer</span>
+          <span class="ac-rule">Mono 10 px. <code>@groov.ia</code> à esq. · numeração à dir. (<code>/01</code>, <code>·fim</code>).</span>
+        </div>
+        <div class="ac-line">
+          <span class="ac-num">05</span>
+          <span class="ac-label">grid 20</span>
+          <span class="ac-rule">Toda margem e elemento alinhado à grade de 20 px. Sem half-pixels.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rules-block">
+    <div class="rb-head">
+      <span class="rb-num">/05.b · uso por elemento</span>
+      <h3>cada elemento tem um papel só</h3>
+    </div>
+    <p class="rb-lede">
+      Não inventar novos clusters, primitivos ou marcadores. A biblioteca está fechada.
+      Cada item tem uso permitido e proibido.
+    </p>
+
+    <div class="usage-table">
+      <div class="usage-row head">
+        <div>elemento</div>
+        <div>nome</div>
+        <div>papel</div>
+        <div>permitido</div>
+        <div>proibido</div>
+      </div>
+
+      <div class="usage-row">
+        <div class="u-glyph"><svg class="uel uel-px" viewBox="0 0 60 60" style="fill:var(--neon)"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg></div>
+        <div class="u-name">Pixel cluster<span>PX·01 — PX·06</span></div>
+        <div class="u-text">Marcação de canto · ritmo · âncora visual. UM por peça, no canto. Tamanho múltiplo de 20px, lado maior 40–160 px.</div>
+        <div class="u-allow">
+          <span>canto TL/TR/BL/BR</span>
+          <span>cor: neon · violeta · noir</span>
+          <span>1 cluster por peça</span>
+        </div>
+        <div class="u-deny">
+          <span>centralizar</span>
+          <span>repetir como padrão</span>
+          <span>cor bone (some)</span>
+          <span>rotacionar</span>
+        </div>
+      </div>
+
+      <div class="usage-row">
+        <div class="u-glyph"><div class="uel uel-dot"></div></div>
+        <div class="u-name">Dot<span>marcador de marca</span></div>
+        <div class="u-text">Reservado ao dot do logotipo e a bylines de autoria (substitui o ponto final em assinaturas). Diâmetro = altura da minúscula.</div>
+        <div class="u-allow">
+          <span>logo · byline</span>
+          <span>cor: violeta</span>
+        </div>
+        <div class="u-deny">
+          <span>como bullet de lista</span>
+          <span>como decoração</span>
+          <span>cor neon ou bone</span>
+        </div>
+      </div>
+
+      <div class="usage-row">
+        <div class="u-glyph"><div class="uel uel-bar"></div></div>
+        <div class="u-name">Bar<span>divisor</span></div>
+        <div class="u-text">Divisor horizontal entre seções editoriais. Altura fixa 16 px, largura total da coluna.</div>
+        <div class="u-allow">
+          <span>cor: neon ou violeta</span>
+          <span>topo de seção</span>
+        </div>
+        <div class="u-deny">
+          <span>vertical</span>
+          <span>dentro de parágrafo</span>
+          <span>com gradiente</span>
+        </div>
+      </div>
+
+      <div class="usage-row">
+        <div class="u-glyph"><div class="uel uel-dia"></div></div>
+        <div class="u-name">Diamante<span>marcador de lista</span></div>
+        <div class="u-text">Marcador de item em listas curtas de método ou status. Sempre em violeta sólido, alinhado à baseline da linha.</div>
+        <div class="u-allow">
+          <span>cor: violeta</span>
+          <span>listas de método</span>
+        </div>
+        <div class="u-deny">
+          <span>cor neon</span>
+          <span>tamanho variável</span>
+          <span>fora de lista</span>
+        </div>
+      </div>
+
+      <div class="usage-row">
+        <div class="u-glyph"><div class="uel uel-tri"></div></div>
+        <div class="u-name">Triângulo<span>indicador de fluxo</span></div>
+        <div class="u-text">Indicador de direção em diagramas de processo. Substitui setas. Sempre apontando para a direita ou para baixo.</div>
+        <div class="u-allow">
+          <span>cor: neon</span>
+          <span>fluxo · processo</span>
+        </div>
+        <div class="u-deny">
+          <span>apontando ↑ ou ←</span>
+          <span>como ornamento</span>
+          <span>cor violeta</span>
+        </div>
+      </div>
+
+      <div class="usage-row">
+        <div class="u-glyph"><div class="uel uel-ring"></div></div>
+        <div class="u-name">Anel<span>container</span></div>
+        <div class="u-text">Moldura para foto/avatar em peças de time. Espessura 6 px. Só para conteúdo humano.</div>
+        <div class="u-allow">
+          <span>cor: violeta</span>
+          <span>retratos · avatar</span>
+        </div>
+        <div class="u-deny">
+          <span>moldura de ícone</span>
+          <span>cor neon</span>
+          <span>variar espessura</span>
+        </div>
+      </div>
+
+      <div class="usage-row">
+        <div class="u-glyph"><div class="uel uel-half"></div></div>
+        <div class="u-name">Meio-disco<span>fechamento</span></div>
+        <div class="u-text">Ornamento de fechamento na base de seção. Aparece UMA vez por documento, no final.</div>
+        <div class="u-allow">
+          <span>cor: bone ou violeta</span>
+          <span>base de página final</span>
+        </div>
+        <div class="u-deny">
+          <span>mais de 1 por peça</span>
+          <span>no topo</span>
+          <span>cor neon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rules-block">
+    <div class="rb-head">
+      <span class="rb-num">/05.c · marcadores</span>
+      <h3>tipografia funcional</h3>
+    </div>
+    <p class="rb-lede">
+      Cada marcador tem uma função sintática. Não substituir um pelo outro.
+      Tudo em Geist Mono, mesmo peso, mesmo tamanho dentro de uma peça.
+    </p>
+
+    <div class="marker-rules">
+      <div class="mr-cell">
+        <div class="mr-glyph">[ &nbsp;X&nbsp; ]</div>
+        <div class="mr-body">
+          <span class="mr-title">colchetes · metadata</span>
+          <span class="mr-rule">Para tipo, status, índice. Sempre maiúsculo. Sempre no topo da peça. Nunca para conteúdo principal.</span>
+          <span class="mr-eg">[ INSIGHT · 01 ] · [ /problema ] · [ STATUS · OK ]</span>
+        </div>
+      </div>
+
+      <div class="mr-cell">
+        <div class="mr-glyph">/&nbsp;01</div>
+        <div class="mr-body">
+          <span class="mr-title">slash · numeração</span>
+          <span class="mr-rule">Numeração de seção, página ou post. Sempre dois dígitos. Sempre seguido do número (nunca antes de palavra).</span>
+          <span class="mr-eg">/01 · /02 · /12 · 05/12</span>
+        </div>
+      </div>
+
+      <div class="mr-cell">
+        <div class="mr-glyph">—</div>
+        <div class="mr-body">
+          <span class="mr-title">em-dash · atribuição</span>
+          <span class="mr-rule">Só para byline e atribuição de citação. Nunca como bullet, nunca para separar ideias.</span>
+          <span class="mr-eg">— marco · co-founder · — ana · head ops</span>
+        </div>
+      </div>
+
+      <div class="mr-cell">
+        <div class="mr-glyph">↳</div>
+        <div class="mr-body">
+          <span class="mr-title">return · CTA</span>
+          <span class="mr-rule">Indica ação ou link. Sempre seguido de URL, comando ou frase de ação. Nunca solto.</span>
+          <span class="mr-eg">↳ link na bio · ↳ groov.ia/diag · ↳ leia o estudo</span>
+        </div>
+      </div>
+
+      <div class="mr-cell">
+        <div class="mr-glyph">·</div>
+        <div class="mr-body">
+          <span class="mr-title">middle dot · separador inline</span>
+          <span class="mr-rule">Separador entre itens curtos numa mesma linha. Sempre com espaço antes e depois.</span>
+          <span class="mr-eg">groov.ia · método · execução · treino</span>
+        </div>
+      </div>
+
+      <div class="mr-cell">
+        <div class="mr-glyph">+</div>
+        <div class="mr-body">
+          <span class="mr-title">plus · conexão</span>
+          <span class="mr-rule">Só em diagramas conceituais ligando duas entidades. Não usar em texto corrido.</span>
+          <span class="mr-eg">humanos + agentes · ops + claude</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rules-block">
+    <div class="rb-head">
+      <span class="rb-num">/05.d · proibido</span>
+      <h3>não pode, em nenhuma peça</h3>
+    </div>
+    <p class="rb-lede">
+      Seis erros recorrentes que quebram o sistema gráfico.
+    </p>
+
+    <div class="forbid-grid">
+      <div class="forbid-cell">
+        <span class="fc-tag">/proibido · 01</span>
+        <div class="fc-demo">
+          <svg viewBox="0 0 60 60" style="width:50px;fill:var(--violet)"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+          <svg viewBox="0 0 60 60" style="width:50px;fill:var(--neon);margin-left:6px"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+          <svg viewBox="0 0 60 60" style="width:50px;fill:var(--bone);margin-left:6px"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+        </div>
+        <p class="fc-text"><b>Múltiplos clusters por peça.</b> Limite: 1 cluster. 2 só em LinkedIn cover (uso institucional).</p>
+      </div>
+
+      <div class="forbid-cell">
+        <span class="fc-tag">/proibido · 02</span>
+        <div class="fc-demo">
+          <svg viewBox="0 0 60 60" style="width:64px;fill:var(--neon);transform:rotate(28deg)"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+        </div>
+        <p class="fc-text"><b>Rotacionar clusters.</b> Os clusters vivem em 0°/90°/180°/270° apenas. Nada de ângulos livres.</p>
+      </div>
+
+      <div class="forbid-cell">
+        <span class="fc-tag">/proibido · 03</span>
+        <div class="fc-demo" style="background:repeating-linear-gradient(0deg,var(--neon) 0 8px,transparent 8px 16px),repeating-linear-gradient(90deg,var(--neon) 0 8px,transparent 8px 16px);opacity:.5"></div>
+        <p class="fc-text"><b>Cluster virou padrão (pattern).</b> Sem repetição em mosaico, sem tiling. Cluster é âncora, não textura.</p>
+      </div>
+
+      <div class="forbid-cell">
+        <span class="fc-tag">/proibido · 04</span>
+        <div class="fc-demo">
+          <div style="font-family:'Geist Mono',monospace;font-size:14px;color:var(--bone);text-align:center;line-height:1.6">
+            — opera AI-first<br>
+            — com método<br>
+            — em 90 dias
+          </div>
+        </div>
+        <p class="fc-text"><b>Em-dash como bullet.</b> Em-dash só em byline. Listas usam número (<code>01</code>) ou diamante.</p>
+      </div>
+
+      <div class="forbid-cell">
+        <span class="fc-tag">/proibido · 05</span>
+        <div class="fc-demo">
+          <span style="font-family:'Geist',sans-serif;font-size:18px;font-weight:600;color:var(--bone)">[ Opera AI-first ]</span>
+        </div>
+        <p class="fc-text"><b>Colchetes na headline.</b> Colchetes são metadados, em mono. Nunca envolvem título nem corpo.</p>
+      </div>
+
+      <div class="forbid-cell">
+        <span class="fc-tag">/proibido · 06</span>
+        <div class="fc-demo">
+          <div class="uel uel-dot" style="background:var(--neon);width:18px !important;height:18px !important"></div>
+          <div class="uel uel-dot" style="background:var(--neon);width:18px !important;height:18px !important;margin-left:6px"></div>
+          <div class="uel uel-dot" style="background:var(--neon);width:18px !important;height:18px !important;margin-left:6px"></div>
+        </div>
+        <p class="fc-text"><b>Dots em série como bullets.</b> Dot é assinatura de marca, não bullet. Esvazia o significado do dot do logo.</p>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ──────────────────────────────────────────────────────────────────
+     08 · SOCIAL
+─────────────────────────────────────────────────────────────────── -->
+<section id="social" class="band band-noir" data-screen-label="08 Social">
+  <header class="band-head">
+    <span class="section-num mono">/06 · social</span>
+    <h2 class="section-h">redes sociais</h2>
+  </header>
+
+  <p class="section-lede">
+    Seis formatos · quatro variações cada · cada bloco é uma família
+    rítmica completa para cobrir conteúdo editorial, lançamento, dado e citação.
+  </p>
+
+  <!-- IG FEED 1080×1350 -->
+  <div class="format">
+    <div class="format-head">
+      <h3 class="fmt-name">Instagram · Feed</h3>
+      <span class="fmt-spec mono">1080 × 1350 · 4:5 · post principal</span>
+    </div>
+    <div class="format-grid ig-portrait">
+
+      <!-- Var 01: headline -->
+      <div class="tpl ig-p">
+        <div class="ig-p-body bg-noir">
+          <span class="tpl-tag mono">[ insight · 01 ]</span>
+          <svg class="tpl-corner" viewBox="0 0 60 60" style="fill:var(--neon)"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+          <h4 class="tpl-h tight"><span>opera</span><span><em>AI-first</em></span><span>com método.</span></h4>
+          <div class="tpl-foot mono"><span>@groov.ia</span><span>/01</span></div>
+        </div>
+        <span class="tpl-label mono">01 · headline editorial</span>
+      </div>
+
+      <!-- Var 02: photo + overlay -->
+      <div class="tpl ig-p">
+        <div class="ig-p-body bg-photo-v">
+          <span class="tpl-tag mono light">[ case · 02 ]</span>
+          <div class="tpl-photo has-photo" style="background-image:url('img/squad-04.png')"></div>
+          <svg class="tpl-mask-tl" viewBox="0 0 80 60" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></svg>
+          <h4 class="tpl-h med-white">Squad AI<br>em <em>90 dias.</em></h4>
+          <div class="tpl-foot mono light"><span>@groov.ia</span><span>/02</span></div>
+        </div>
+        <span class="tpl-label mono">02 · foto + headline</span>
+      </div>
+
+      <!-- Var 03: big stat -->
+      <div class="tpl ig-p">
+        <div class="ig-p-body bg-violet">
+          <span class="tpl-tag mono dark">[ dado · 03 ]</span>
+          <div class="tpl-stat">
+            <span class="stat-n">3,8x</span>
+            <span class="stat-unit mono" style="font-size: 17px;">produtividade <br>operacional</span>
+          </div>
+          <svg class="tpl-floor" viewBox="0 0 100 40" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg>
+          <div class="tpl-foot mono dark"><span>@groov.ia</span><span>/03</span></div>
+        </div>
+        <span class="tpl-label mono">03 · dado em destaque</span>
+      </div>
+
+      <!-- Var 04: quote -->
+      <div class="tpl ig-p">
+        <div class="ig-p-body bg-bone">
+          <span class="tpl-tag mono dark">[ quote · 04 ]</span>
+          <div class="tpl-quote-mark">“</div>
+          <p class="tpl-quote">Não automatizamos o passado. Operamos o próximo ritmo.</p>
+          <div class="tpl-byline mono"><span class="dot-v"></span><span>marco · co-founder</span></div>
+          <div class="tpl-foot mono dark"><span>@groov.ia</span><span>/04</span></div>
+        </div>
+        <span class="tpl-label mono">04 · citação</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- IG FEED 1080×1080 -->
+  <div class="format">
+    <div class="format-head">
+      <h3 class="fmt-name">Instagram · Feed quadrado</h3>
+      <span class="fmt-spec mono">1080 × 1080 · 1:1 · highlight</span>
+    </div>
+    <div class="format-grid ig-square">
+
+      <div class="tpl ig-s">
+        <div class="ig-s-body bg-noir">
+          <span class="tpl-tag mono">[ /05 · launch ]</span>
+          <h4 class="tpl-h sq"><em>treine</em><br>seu squad.</h4>
+          <svg class="tpl-corner br" viewBox="0 0 80 80" style="fill:var(--violet)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
+          <div class="tpl-foot mono"><span>@groov.ia</span><span>·</span></div>
+        </div>
+        <span class="tpl-label mono">01 · headline + cluster</span>
+      </div>
+
+      <div class="tpl ig-s">
+        <div class="ig-s-body bg-violet">
+          <span class="tpl-tag mono dark">[ /06 · serviço ]</span>
+          <ul class="tpl-list">
+            <li><span class="lm mono">01</span> Estratégia</li>
+            <li><span class="lm mono">02</span> Execução</li>
+            <li><span class="lm mono">03</span> Treino</li>
+          </ul>
+          <div class="tpl-foot mono dark"><span>3 pilares</span><span>groov.ia</span></div>
+        </div>
+        <span class="tpl-label mono">02 · lista de serviços</span>
+      </div>
+
+      <div class="tpl ig-s">
+        <div class="ig-s-body bg-bone">
+          <span class="tpl-tag mono dark">[ /07 · dado ]</span>
+          <div class="tpl-bignum">
+            <span class="bn">90</span>
+            <span class="bn-unit mono" style="font-size: 20px;">dias até<br>AI-first.</span>
+          </div>
+          <svg class="tpl-corner tr" viewBox="0 0 60 60" style="fill:var(--violet)"><rect x="0" y="0" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="0" y="40" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect></svg>
+          <div class="tpl-foot mono dark"><span>@groov.ia</span><span>·</span></div>
+        </div>
+        <span class="tpl-label mono">03 · número grande</span>
+      </div>
+
+      <div class="tpl ig-s">
+        <div class="ig-s-body bg-photo-n">
+          <span class="tpl-tag mono light">[ /08 · case ]</span>
+          <div class="tpl-photo has-photo" style="background-image:url('img/portrait-02.png')"></div>
+          <div class="tpl-mask-pixel-row">
+            <i></i><i></i><i></i><i></i><i></i>
+          </div>
+          <h4 class="tpl-h sq-photo">case · <em>fintech</em></h4>
+          <div class="tpl-foot mono light"><span>@groov.ia</span><span>/08</span></div>
+        </div>
+        <span class="tpl-label mono">04 · foto + tag</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- IG STORY -->
+  <div class="format">
+    <div class="format-head">
+      <h3 class="fmt-name">Instagram · Story</h3>
+      <span class="fmt-spec mono">1080 × 1920 · 9:16 · stories e reels cover</span>
+    </div>
+    <div class="format-grid ig-story">
+
+      <div class="tpl story">
+        <div class="story-body bg-noir">
+          <div class="story-top mono"><span>[ /story · 01 ]</span><span>09:42</span></div>
+          <svg class="story-cluster" viewBox="0 0 100 40" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg>
+          <h4 class="story-h">opera<br><em>AI-first</em><br>com método.</h4>
+          <div class="story-cta mono">↳ link na bio</div>
+          <div class="story-foot mono"><span>@groov.ia</span></div>
+        </div>
+        <span class="tpl-label mono">01 · headline</span>
+      </div>
+
+      <div class="tpl story">
+        <div class="story-body bg-violet">
+          <div class="story-top mono dark"><span>[ /story · 02 ]</span><span>now</span></div>
+          <div class="story-q-mark">“</div>
+          <p class="story-quote">Times AI-first não esperam ferramenta perfeita. Aprendem no ritmo.</p>
+          <div class="story-cite mono dark">— ana · head ops</div>
+          <div class="story-foot mono dark"><span>@groov.ia</span></div>
+        </div>
+        <span class="tpl-label mono">02 · quote</span>
+      </div>
+
+      <div class="tpl story">
+        <div class="story-body bg-photo-st">
+          <div class="story-photo has-photo" style="background-image:url('img/wide-01.png')"></div>
+          <div class="story-overlay">
+            <div class="story-top mono light"><span>[ /story · 03 ]</span><span>case</span></div>
+            <h4 class="story-h photo">resultado.<br><em>+312%</em></h4>
+            <div class="story-byline mono light">fintech · saas · 8 semanas</div>
+            <div class="story-cta mono light">↳ leia o estudo</div>
+          </div>
+        </div>
+        <span class="tpl-label mono">03 · foto + dado</span>
+      </div>
+
+      <div class="tpl story">
+        <div class="story-body bg-bone">
+          <div class="story-top mono dark"><span>[ /story · 04 ]</span><span>announcement</span></div>
+          <span class="story-mini-tag mono">novo programa</span>
+          <h4 class="story-h dark">squad<br><em>operadores</em><br>de IA.</h4>
+          <div class="story-meta mono dark">
+            <div><span class="dim">início</span> 12 jun</div>
+            <div><span class="dim">duração</span> 90 dias</div>
+            <div><span class="dim">vagas</span> 12</div>
+          </div>
+          <div class="story-cta mono dark">↳ inscreva-se</div>
+        </div>
+        <span class="tpl-label mono">04 · anúncio</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CARROSSEL -->
+  <div class="format">
+    <div class="format-head">
+      <h3 class="fmt-name">Carrossel · Instagram</h3>
+      <span class="fmt-spec mono">1080 × 1350 · 5 cards · narrativa em sequência</span>
+    </div>
+    <div class="carrossel">
+      <div class="tpl carr">
+        <div class="ig-p-body bg-noir">
+          <span class="tpl-tag mono">[ 01/05 ]</span>
+          <svg class="tpl-corner" viewBox="0 0 60 60" style="fill:var(--violet)"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+          <h4 class="tpl-h tight"><span>5 sinais</span><span>que seu time</span><span><em>já é</em> AI-first.</span></h4>
+          <div class="tpl-foot mono"><span>arraste →</span><span>/01</span></div>
+        </div>
+        <span class="tpl-label mono">01 · capa</span>
+      </div>
+      <div class="tpl carr">
+        <div class="ig-p-body bg-bone">
+          <span class="tpl-tag mono dark">[ 02/05 ]</span>
+          <span class="carr-num">01</span>
+          <h4 class="tpl-h med-dark">handoffs claros entre humano e agente.</h4>
+          <div class="tpl-foot mono dark"><span>arraste →</span><span>/02</span></div>
+        </div>
+        <span class="tpl-label mono">02 · item</span>
+      </div>
+      <div class="tpl carr">
+        <div class="ig-p-body bg-violet">
+          <span class="tpl-tag mono dark">[ 03/05 ]</span>
+          <span class="carr-num dark">02</span>
+          <h4 class="tpl-h med-dark">métricas operacionais por agente.</h4>
+          <div class="tpl-foot mono dark"><span>arraste →</span><span>/03</span></div>
+        </div>
+        <span class="tpl-label mono">03 · item</span>
+      </div>
+      <div class="tpl carr">
+        <div class="ig-p-body bg-bone">
+          <span class="tpl-tag mono dark">[ 04/05 ]</span>
+          <span class="carr-num">03</span>
+          <h4 class="tpl-h med-dark">cadência de retro com squad humano e agente.</h4>
+          <div class="tpl-foot mono dark"><span>arraste →</span><span>/04</span></div>
+        </div>
+        <span class="tpl-label mono">04 · item</span>
+      </div>
+      <div class="tpl carr">
+        <div class="ig-p-body bg-noir">
+          <span class="tpl-tag mono">[ 05/05 ]</span>
+          <h4 class="tpl-h tight" style="color:var(--neon)"><span>quer um</span><span>diagnóstico?</span></h4>
+          <div class="tpl-cta-pill mono">↳ groov.ia/diag</div>
+          <svg class="tpl-corner br" viewBox="0 0 80 60" style="fill:var(--violet)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></svg>
+          <div class="tpl-foot mono"><span>@groov.ia</span><span>·fim</span></div>
+        </div>
+        <span class="tpl-label mono">05 · CTA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LINKEDIN POST -->
+  <div class="format">
+    <div class="format-head">
+      <h3 class="fmt-name">LinkedIn · Post</h3>
+      <span class="fmt-spec mono">1200 × 628 · 1.91:1 · feed B2B</span>
+    </div>
+    <div class="format-grid li-post">
+      <div class="tpl li">
+        <div class="li-body bg-noir">
+          <span class="tpl-tag mono">[ /lk · 01 ]</span>
+          <h4 class="li-h"><em>operação</em><br>AI-first em 90 dias.</h4>
+          <div class="li-foot mono"><span>groov.ia</span><span>marco — co-founder</span></div>
+          <svg class="li-corner" viewBox="0 0 80 80" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
+        </div>
+        <span class="tpl-label mono">01 · headline + autor</span>
+      </div>
+      <div class="tpl li">
+        <div class="li-body bg-bone">
+          <span class="tpl-tag mono dark">[ /lk · 02 ]</span>
+          <div class="li-split">
+            <h4 class="li-h dark">3,8x<br><span class="li-sub mono">produtividade<br>em ops</span></h4>
+            <div class="li-stats mono">
+              <div><span class="dim">+312%</span> velocity</div>
+              <div><span class="dim">-46%</span> ticket time</div>
+              <div><span class="dim">2.4x</span> nps interno</div>
+            </div>
+          </div>
+          <div class="li-foot mono dark"><span>groov.ia · case fintech</span><span>2026</span></div>
+        </div>
+        <span class="tpl-label mono">02 · case com dados</span>
+      </div>
+      <div class="tpl li">
+        <div class="li-body bg-violet">
+          <span class="tpl-tag mono dark">[ /lk · 03 ]</span>
+          <h4 class="li-h dark">o método<br>em 3 passos.</h4>
+          <div class="li-steps mono">
+            <span>01 estratégia</span>
+            <span>02 execução</span>
+            <span>03 treino</span>
+          </div>
+          <div class="li-foot mono dark"><span>groov.ia · método</span><span>·</span></div>
+        </div>
+        <span class="tpl-label mono">03 · método</span>
+      </div>
+      <div class="tpl li">
+        <div class="li-body bg-photo-li">
+          <div class="li-photo has-photo" style="background-image:url('img/squad-05.png')"></div>
+          <div class="li-overlay">
+            <span class="tpl-tag mono light">[ /lk · 04 ]</span>
+            <h4 class="li-h light">conheça<br>o time.</h4>
+            <div class="li-foot mono light"><span>groov.ia</span><span>squad · 2026</span></div>
+          </div>
+        </div>
+        <span class="tpl-label mono">04 · time</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- LINKEDIN COVER -->
+  <div class="format">
+    <div class="format-head">
+      <h3 class="fmt-name">LinkedIn · Capa</h3>
+      <span class="fmt-spec mono">1584 × 396 · 4:1 · header de página</span>
+    </div>
+    <div class="li-covers">
+      <div class="tpl li-cover">
+        <div class="cover-body bg-noir">
+          <svg class="cover-logo" viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+          <span class="cover-pos mono">implementamos IA · treinamos squads · 90 dias AI-first</span>
+          <svg class="cover-dec d1" viewBox="0 0 100 40" style="fill:var(--violet)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg>
+          <svg class="cover-dec d2" viewBox="0 0 80 60" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></svg>
+        </div>
+        <span class="tpl-label mono">01 · institucional</span>
+      </div>
+      <div class="tpl li-cover">
+        <div class="cover-body bg-violet">
+          <h4 class="cover-claim"><em>opera</em> AI-first.</h4>
+          <span class="cover-pos mono dark">groov.ia · método · execução · treino</span>
+          <svg class="cover-dec d3" viewBox="0 0 80 80" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
+          <div class="cover-dia"></div>
+        </div>
+        <span class="tpl-label mono">02 · claim</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ──────────────────────────────────────────────────────────────────
+     09 · SLIDES
+─────────────────────────────────────────────────────────────────── -->
+<section id="slides" class="band band-bone" data-screen-label="09 Slides">
+  <header class="band-head">
+    <span class="section-num mono">/07 · slides</span>
+    <h2 class="section-h">apresentação 16:9</h2>
+  </header>
+
+  <p class="section-lede">
+    Doze templates de slide em 1920×1080 cobrindo abertura, divisores de seção,
+    manifesto, dados, processo, comparação, citação e fechamento.
+    Cada slide segue o sistema gráfico — sem decoração gratuita.
+  </p>
+
+  <div class="slides-grid">
+
+    <!-- 01 cover -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-noir">
+        <div class="sl-top mono"><span>[ groov.ia · pitch · 2026 ]</span><span>01/12</span></div>
+        <h3 class="sl-title sl-cover">opera<br><em>AI‑first</em><br>com método.</h3>
+        <svg class="sl-px sl-px-1" viewBox="0 0 80 80" style="fill:var(--violet)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
+        <svg class="sl-px sl-px-2" viewBox="0 0 60 60" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="0" y="40" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect></svg>
+        <div class="sl-bottom mono"><span>groov.ia</span><span>brand · v.1</span></div>
+      </div>
+      <span class="slide-label mono">01 · capa</span>
+    </div>
+
+    <!-- 02 section divider -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-violet">
+        <div class="sl-top mono dark"><span>[ section ]</span><span>02/12</span></div>
+        <span class="sl-section-num mono dark">02</span>
+        <h3 class="sl-title sl-section">o problema com<br><em>automação</em> sem método.</h3>
+        <svg class="sl-px sl-px-side" viewBox="0 0 100 40" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg>
+        <div class="sl-bottom mono dark"><span>groov.ia · /problema</span><span>·</span></div>
+      </div>
+      <span class="slide-label mono">02 · divisor de seção</span>
+    </div>
+
+    <!-- 03 manifesto -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-noir">
+        <div class="sl-top mono"><span>[ manifesto ]</span><span>03/12</span></div>
+        <p class="sl-manifesto" style="font-size: 31px">
+          Não automatizamos o passado.<br>
+          Operamos o <em>próximo ritmo</em> —<br>
+          com agentes, humanos e método.
+        </p>
+        <div class="sl-bottom mono"><span>— groov.ia</span><span>2026</span></div>
+      </div>
+      <span class="slide-label mono">03 · manifesto</span>
+    </div>
+
+    <!-- 04 two column -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-bone">
+        <div class="sl-top mono dark"><span>[ comparison ]</span><span>04/12</span></div>
+        <h3 class="sl-h-m dark">automação genérica <em>vs.</em> AI-first.</h3>
+        <div class="sl-twocol mono">
+          <div>
+            <span class="dim">automação genérica</span>
+            <ul><li>· ferramenta no centro</li><li>· tarefas isoladas</li><li>· sem cadência</li></ul>
+          </div>
+          <div>
+            <span class="dim">AI-first com método</span>
+            <ul><li>· operação no centro</li><li>· handoffs claros</li><li>· retro semanal</li></ul>
+          </div>
+        </div>
+        <div class="sl-bottom mono dark"><span>groov.ia · /método</span><span>·</span></div>
+      </div>
+      <span class="slide-label mono">04 · comparação</span>
+    </div>
+
+    <!-- 05 big stat -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-violet">
+        <div class="sl-top mono dark"><span>[ /dado ]</span><span>05/12</span></div>
+        <div class="sl-stat-block">
+          <span class="sl-stat-n">3,8<small>x</small></span>
+          <span class="sl-stat-cap mono">produtividade operacional<br>· primeiros 90 dias · case fintech</span>
+        </div>
+        <svg class="sl-px sl-px-floor" viewBox="0 0 100 40" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg>
+        <div class="sl-bottom mono dark"><span>groov.ia · case</span><span>2026</span></div>
+      </div>
+      <span class="slide-label mono">05 · dado em destaque</span>
+    </div>
+
+    <!-- 06 process -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-noir">
+        <div class="sl-top mono"><span>[ /processo ]</span><span>06/12</span></div>
+        <h3 class="sl-h-m">método em <em>3 passos.</em></h3>
+        <div class="sl-process">
+          <div class="sl-step">
+            <span class="sl-step-n mono">01</span>
+            <span class="sl-step-name">estratégia</span>
+            <span class="sl-step-d mono">2 sem · diagnóstico</span>
+          </div>
+          <span class="sl-arrow mono">→</span>
+          <div class="sl-step">
+            <span class="sl-step-n mono">02</span>
+            <span class="sl-step-name">execução</span>
+            <span class="sl-step-d mono">6 sem · agentes</span>
+          </div>
+          <span class="sl-arrow mono">→</span>
+          <div class="sl-step">
+            <span class="sl-step-n mono">03</span>
+            <span class="sl-step-name">treino</span>
+            <span class="sl-step-d mono">contínuo · squad</span>
+          </div>
+        </div>
+        <div class="sl-bottom mono"><span>groov.ia · /método</span><span>·</span></div>
+      </div>
+      <span class="slide-label mono">06 · processo</span>
+    </div>
+
+    <!-- 07 list -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-bone">
+        <div class="sl-top mono dark"><span>[ /lista ]</span><span>07/12</span></div>
+        <h3 class="sl-h-m dark">o que entregamos.</h3>
+        <ol class="sl-list">
+          <li><span class="mono dim">01</span> diagnóstico operacional</li>
+          <li><span class="mono dim">02</span> mapa de agentes prioritários</li>
+          <li><span class="mono dim">03</span> implementação Claude + handoffs</li>
+          <li><span class="mono dim">04</span> playbook de cadência interna</li>
+          <li><span class="mono dim">05</span> treino prático do squad</li>
+        </ol>
+        <div class="sl-bottom mono dark"><span>groov.ia · /entrega</span><span>·</span></div>
+      </div>
+      <span class="slide-label mono">07 · lista numerada</span>
+    </div>
+
+    <!-- 08 image hero -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-photo-sl">
+        <div class="sl-photo has-photo" style="background-image:url('img/squad-01.png')"></div>
+        <div class="sl-overlay">
+          <div class="sl-top mono light"><span>[ /squad ]</span><span>08/12</span></div>
+          <h3 class="sl-h-m light" style="color: rgb(99, 0, 255);"><span style="color: rgb(1, 205, 106);">quem opera<br>com a gente.</span></h3>
+          <div class="sl-bottom mono light"><span>groov.ia · time</span><span>2026</span></div>
+        </div>
+        <svg class="sl-mask-tl" viewBox="0 0 80 60" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></svg>
+      </div>
+      <span class="slide-label mono">08 · foto principal</span>
+    </div>
+
+    <!-- 09 quote -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-noir">
+        <div class="sl-top mono"><span>[ /quote ]</span><span>09/12</span></div>
+        <span class="sl-q-mark">“</span>
+        <p class="sl-quote" style="font-size: 23px;">Em 90 dias passamos de pilotos <em style="font-size: 23px;">experimentais</em> para operação contínua. O método foi o que destravou.</p>
+        <div class="sl-byline mono"><span class="ldot"></span><span>helena · cto · fintech case</span></div>
+        <div class="sl-bottom mono"><span>groov.ia · /case</span><span>·</span></div>
+      </div>
+      <span class="slide-label mono">09 · citação</span>
+    </div>
+
+    <!-- 10 grid of clients -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-bone">
+        <div class="sl-top mono dark"><span>[ /clientes ]</span><span>10/12</span></div>
+        <h3 class="sl-h-m dark" style="font-size: 41px;">empresas que <em style="font-size: 41px;">operam</em> com a gente.</h3>
+        <div class="sl-clients">
+          <div class="cli-cell mono">[ logo · 01 ]</div>
+          <div class="cli-cell mono">[ logo · 02 ]</div>
+          <div class="cli-cell mono">[ logo · 03 ]</div>
+          <div class="cli-cell mono">[ logo · 04 ]</div>
+          <div class="cli-cell mono">[ logo · 05 ]</div>
+          <div class="cli-cell mono">[ logo · 06 ]</div>
+          <div class="cli-cell mono">[ logo · 07 ]</div>
+          <div class="cli-cell mono">[ logo · 08 ]</div>
+        </div>
+        <div class="sl-bottom mono dark"><span>groov.ia · /portfolio</span><span>·</span></div>
+      </div>
+      <span class="slide-label mono">10 · grid de clientes</span>
+    </div>
+
+    <!-- 11 stat trio -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-noir">
+        <div class="sl-top mono"><span>[ /resultados ]</span><span>11/12</span></div>
+        <h3 class="sl-h-m">números do método.</h3>
+        <div class="sl-trio">
+          <div><span class="trio-n">90<small>dias</small></span><span class="mono dim">até AI-first</span></div>
+          <div><span class="trio-n">3,8<small>x</small></span><span class="mono dim">produtividade</span></div>
+          <div><span class="trio-n">+312<small>%</small></span><span class="mono dim">velocity ops</span></div>
+        </div>
+        <div class="sl-bottom mono"><span>groov.ia · /resultados</span><span>·</span></div>
+      </div>
+      <span class="slide-label mono">11 · trio de dados</span>
+    </div>
+
+    <!-- 12 closing -->
+    <div class="slide-card">
+      <div class="slide-canvas bg-violet">
+        <div class="sl-top mono dark"><span>[ /fim ]</span><span>12/12</span></div>
+        <h3 class="sl-title sl-close dark"><em>vamos</em><br>operar?</h3>
+        <div class="sl-contact mono dark">
+          <span>groov.ia/diagnostico</span>
+          <span>marco@groov.ia · +55 11 9 0000-0000</span>
+        </div>
+        <svg class="sl-px sl-px-1" viewBox="0 0 80 80" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
+        <svg class="sl-px sl-px-2" viewBox="0 0 60 60" style="fill:var(--neon)"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
+        <div class="sl-bottom mono dark"><span>groov.ia</span><span>·fim</span></div>
+      </div>
+      <span class="slide-label mono">12 · fechamento</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ──────────────────────────────────────────────────────────────────
+     CLOSE
+─────────────────────────────────────────────────────────────────── -->
+<footer class="closing" data-screen-label="closing">
+  <div class="closing-grid">
+    <div>
+      <span class="mono dim">[ end · brandbook v.1 · 2026 ]</span>
+      <h2 class="closing-h"><em>opera</em><br>com a gente.</h2>
+      <p class="mono dim">documento vivo. revisões em groov.ia/brand · contato design@groov.ia</p>
+    </div>
+    <svg class="closing-mark" viewBox="0 0 490.39 139.55"><g>
+        <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+        <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+        <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+        <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+        <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+        <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+      </g>
+      <circle class="gm-dot" cx="369.27" cy="90.96" r="8.88"></circle></svg>
+  </div>
+</footer>
+
+
+
+</body></html>
