@@ -343,6 +343,26 @@
 </head>
 <body class="dark" style="">
 
+<!-- ── Reusable Groovia wordmark (footer/handle lockup) ── -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+  <symbol id="gia-logo" viewBox="0 0 490.39 139.55">
+    <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
+    <path d="M143.33,36.08l-9.23,16.08c-3.92-2.52-6.99-3.5-10.77-3.5-9.09,0-15.1,5.87-15.1,17.62v33.56h-21.95V30.76h19.16l1.68,8.67c4.75-7.27,11.33-10.21,18.46-10.21,6.15,0,13,2.24,17.76,6.85Z"></path>
+    <path d="M141.51,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM195.63,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+    <path d="M222.62,65.3c0-21.53,14.68-36.08,37.89-36.08s38.03,14.54,38.03,36.08-14.68,36.08-38.03,36.08-37.89-14.54-37.89-36.08ZM276.73,65.3c0-10.07-6.43-17.48-16.22-17.48s-16.08,7.41-16.08,17.48,6.43,17.48,16.08,17.48,16.22-7.41,16.22-17.48Z"></path>
+    <path d="M377.97,30.76l-29.22,69.08h-22.37l-29.36-69.08h23.91l8.25,20.83,8.53,25.03,8.53-25.03,8.39-20.83h23.35Z"></path>
+    <path d="M381.19,12.03c0-6.99,5.31-12.03,12.86-12.03s12.86,5.03,12.86,12.03-5.31,11.89-12.86,11.89-12.86-4.89-12.86-11.89ZM383,30.76h21.95v69.08h-21.95V30.76Z"></path>
+    <path d="M490.39,30.76v69.08h-19.02l-1.4-8.25c-5.73,6.29-13.56,9.65-22.93,9.65-19.44,0-33-14.68-33-35.94s13.56-35.94,33-35.94c9.37,0,17.34,3.36,22.93,9.51l1.4-8.11h19.02ZM468.72,65.3c0-10.35-6.71-17.48-16.5-17.48s-16.36,7.13-16.36,17.48,6.71,17.48,16.36,17.48,16.5-7.13,16.5-17.48Z"></path>
+    <circle cx="369.27" cy="90.96" r="8.88" fill="var(--gm-dot, currentColor)"></circle>
+  </symbol>
+</defs></svg>
+
+<style>
+  /* Brand wordmark used inline inside footers / handle lockups */
+  .foot-logo { display: inline-block; height: 1.45em; width: auto; fill: currentColor; vertical-align: -0.32em; }
+  .sl-bottom .foot-logo, .li-foot .foot-logo, .cover-pos .foot-logo { vertical-align: -0.28em; }
+</style>
+
 <a class="skip-link" href="#main">pular para o conteúdo</a>
 
 <!-- ──────────────────────────────────────────────────────────────────
@@ -1510,7 +1530,7 @@
           <span class="tpl-tag mono">[ insight · 01 ]</span>
           <svg class="tpl-corner" viewBox="0 0 60 60" style="fill:var(--neon)"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
           <h4 class="tpl-h tight"><span>AI First</span><span><em>Human</em></span><span>Always.</span></h4>
-          <div class="tpl-foot mono"><span>@groov.ia</span><span>/01</span></div>
+          <div class="tpl-foot mono"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>/01</span></div>
         </div>
         <span class="tpl-label mono">01 · headline editorial</span>
       </div>
@@ -1522,7 +1542,7 @@
           <div class="tpl-photo has-photo" style="background-image:url('img/squad-04.png')"></div>
           <svg class="tpl-mask-tl" viewBox="0 0 80 60" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></svg>
           <h4 class="tpl-h med-white">Squad AI<br>em <em>90 dias.</em></h4>
-          <div class="tpl-foot mono light"><span>@groov.ia</span><span>/02</span></div>
+          <div class="tpl-foot mono light"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>/02</span></div>
         </div>
         <span class="tpl-label mono">02 · foto + headline</span>
       </div>
@@ -1536,7 +1556,7 @@
             <span class="stat-unit mono" style="font-size: 17px;">produtividade <br>operacional</span>
           </div>
           <svg class="tpl-floor" viewBox="0 0 100 40" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg>
-          <div class="tpl-foot mono dark"><span>@groov.ia</span><span>/03</span></div>
+          <div class="tpl-foot mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>/03</span></div>
         </div>
         <span class="tpl-label mono">03 · dado em destaque</span>
       </div>
@@ -1548,7 +1568,7 @@
           <div class="tpl-quote-mark">“</div>
           <p class="tpl-quote">Não automatizamos o passado. Operamos o próximo ritmo.</p>
           <div class="tpl-byline mono"><span class="dot-v"></span><span>marco · co-founder</span></div>
-          <div class="tpl-foot mono dark"><span>@groov.ia</span><span>/04</span></div>
+          <div class="tpl-foot mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>/04</span></div>
         </div>
         <span class="tpl-label mono">04 · citação</span>
       </div>
@@ -1569,7 +1589,7 @@
           <span class="tpl-tag mono">[ /05 · launch ]</span>
           <h4 class="tpl-h sq"><em>treine</em><br>seu squad.</h4>
           <svg class="tpl-corner br" viewBox="0 0 80 80" style="fill:var(--violet)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
-          <div class="tpl-foot mono"><span>@groov.ia</span><span>·</span></div>
+          <div class="tpl-foot mono"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>·</span></div>
         </div>
         <span class="tpl-label mono">01 · headline + cluster</span>
       </div>
@@ -1582,7 +1602,7 @@
             <li><span class="lm mono">02</span> Execução</li>
             <li><span class="lm mono">03</span> Treino</li>
           </ul>
-          <div class="tpl-foot mono dark"><span>3 pilares</span><span>groov.ia</span></div>
+          <div class="tpl-foot mono dark"><span>3 pilares</span><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span></div>
         </div>
         <span class="tpl-label mono">02 · lista de serviços</span>
       </div>
@@ -1595,7 +1615,7 @@
             <span class="bn-unit mono" style="font-size: 20px;">dias até<br>AI First.</span>
           </div>
           <svg class="tpl-corner tr" viewBox="0 0 60 60" style="fill:var(--violet)"><rect x="0" y="0" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="0" y="40" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect></svg>
-          <div class="tpl-foot mono dark"><span>@groov.ia</span><span>·</span></div>
+          <div class="tpl-foot mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>·</span></div>
         </div>
         <span class="tpl-label mono">03 · número grande</span>
       </div>
@@ -1608,7 +1628,7 @@
             <i></i><i></i><i></i><i></i><i></i>
           </div>
           <h4 class="tpl-h sq-photo">case · <em>fintech</em></h4>
-          <div class="tpl-foot mono light"><span>@groov.ia</span><span>/08</span></div>
+          <div class="tpl-foot mono light"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>/08</span></div>
         </div>
         <span class="tpl-label mono">04 · foto + tag</span>
       </div>
@@ -1630,7 +1650,7 @@
           <svg class="story-cluster" viewBox="0 0 100 40" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg>
           <h4 class="story-h">AI First<br><em>Human</em><br>Always.</h4>
           <div class="story-cta mono">↳ link na bio</div>
-          <div class="story-foot mono"><span>@groov.ia</span></div>
+          <div class="story-foot mono"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span></div>
         </div>
         <span class="tpl-label mono">01 · headline</span>
       </div>
@@ -1641,7 +1661,7 @@
           <div class="story-q-mark">“</div>
           <p class="story-quote">Times AI First Human Always não esperam ferramenta perfeita. Aprendem no ritmo.</p>
           <div class="story-cite mono dark">— ana · head ops</div>
-          <div class="story-foot mono dark"><span>@groov.ia</span></div>
+          <div class="story-foot mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span></div>
         </div>
         <span class="tpl-label mono">02 · quote</span>
       </div>
@@ -1726,7 +1746,7 @@
           <h4 class="tpl-h tight" style="color:var(--neon)"><span>quer um</span><span>diagnóstico?</span></h4>
           <div class="tpl-cta-pill mono">↳ groov.ia/diag</div>
           <svg class="tpl-corner br" viewBox="0 0 80 60" style="fill:var(--violet)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></svg>
-          <div class="tpl-foot mono"><span>@groov.ia</span><span>·fim</span></div>
+          <div class="tpl-foot mono"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>·fim</span></div>
         </div>
         <span class="tpl-label mono">05 · CTA</span>
       </div>
@@ -1744,7 +1764,7 @@
         <div class="li-body bg-noir">
           <span class="tpl-tag mono">[ /lk · 01 ]</span>
           <h4 class="li-h"><em>operação</em><br>AI First Human Always.</h4>
-          <div class="li-foot mono"><span>groov.ia</span><span>marco — co-founder</span></div>
+          <div class="li-foot mono"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>marco — co-founder</span></div>
           <svg class="li-corner" viewBox="0 0 80 80" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
         </div>
         <span class="tpl-label mono">01 · headline + autor</span>
@@ -1760,7 +1780,7 @@
               <div><span class="dim">2.4x</span> nps interno</div>
             </div>
           </div>
-          <div class="li-foot mono dark"><span>groov.ia · case fintech</span><span>2026</span></div>
+          <div class="li-foot mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · case fintech</span><span>2026</span></div>
         </div>
         <span class="tpl-label mono">02 · case com dados</span>
       </div>
@@ -1773,7 +1793,7 @@
             <span>02 execução</span>
             <span>03 treino</span>
           </div>
-          <div class="li-foot mono dark"><span>groov.ia · método</span><span>·</span></div>
+          <div class="li-foot mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · método</span><span>·</span></div>
         </div>
         <span class="tpl-label mono">03 · método</span>
       </div>
@@ -1783,7 +1803,7 @@
           <div class="li-overlay">
             <span class="tpl-tag mono light">[ /lk · 04 ]</span>
             <h4 class="li-h light">conheça<br>o time.</h4>
-            <div class="li-foot mono light"><span>groov.ia</span><span>squad · 2026</span></div>
+            <div class="li-foot mono light"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>squad · 2026</span></div>
           </div>
         </div>
         <span class="tpl-label mono">04 · time</span>
@@ -1819,7 +1839,7 @@
       <div class="tpl li-cover">
         <div class="cover-body bg-violet">
           <h4 class="cover-claim" style="font-size: 40px"><em>AI First</em><br>Human Always.</h4>
-          <span class="cover-pos mono dark">groov.ia · método · execução · treino</span>
+          <span class="cover-pos mono dark"><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · método · execução · treino</span>
           <svg class="cover-dec d3" viewBox="0 0 80 80" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
           <div class="cover-dia"></div>
         </div>
@@ -1854,7 +1874,7 @@
         <h3 class="sl-title sl-cover" style="font-size: 70px">AI First<br><em>Human</em><br>Always.</h3>
         <svg class="sl-px sl-px-1" viewBox="0 0 80 80" style="fill:var(--violet)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
         <svg class="sl-px sl-px-2" viewBox="0 0 60 60" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="0" y="40" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect></svg>
-        <div class="sl-bottom mono"><span>groov.ia</span><span>brand · v.1</span></div>
+        <div class="sl-bottom mono"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>brand · v.1</span></div>
       </div>
       <span class="slide-label mono">01 · capa</span>
     </div>
@@ -1866,7 +1886,7 @@
         <span class="sl-section-num mono dark">02</span>
         <h3 class="sl-title sl-section" style="font-size: 49px">o problema com<br><em>automação</em> sem método.</h3>
         <svg class="sl-px sl-px-side" viewBox="0 0 100 40" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg>
-        <div class="sl-bottom mono dark"><span>groov.ia · /problema</span><span>·</span></div>
+        <div class="sl-bottom mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · /problema</span><span>·</span></div>
       </div>
       <span class="slide-label mono">02 · divisor de seção</span>
     </div>
@@ -1880,7 +1900,7 @@
           Operamos o <em>próximo ritmo</em> —<br>
           com agentes, humanos e método.
         </p>
-        <div class="sl-bottom mono"><span>— groov.ia</span><span>2026</span></div>
+        <div class="sl-bottom mono"><span>— <svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>2026</span></div>
       </div>
       <span class="slide-label mono">03 · manifesto</span>
     </div>
@@ -1900,7 +1920,7 @@
             <ul><li>· operação no centro</li><li>· handoffs claros</li><li>· retro semanal</li></ul>
           </div>
         </div>
-        <div class="sl-bottom mono dark"><span>groov.ia · /método</span><span>·</span></div>
+        <div class="sl-bottom mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · /método</span><span>·</span></div>
       </div>
       <span class="slide-label mono">04 · comparação</span>
     </div>
@@ -1914,7 +1934,7 @@
           <span class="sl-stat-cap mono">produtividade operacional<br>· primeiros 90 dias · case fintech</span>
         </div>
         <svg class="sl-px sl-px-floor" viewBox="0 0 100 40" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="0" width="20" height="20"></rect><rect x="60" y="20" width="20" height="20"></rect><rect x="80" y="0" width="20" height="20"></rect></svg>
-        <div class="sl-bottom mono dark"><span>groov.ia · case</span><span>2026</span></div>
+        <div class="sl-bottom mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · case</span><span>2026</span></div>
       </div>
       <span class="slide-label mono">05 · dado em destaque</span>
     </div>
@@ -1943,7 +1963,7 @@
             <span class="sl-step-d mono">contínuo · squad</span>
           </div>
         </div>
-        <div class="sl-bottom mono"><span>groov.ia · /método</span><span>·</span></div>
+        <div class="sl-bottom mono"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · /método</span><span>·</span></div>
       </div>
       <span class="slide-label mono">06 · processo</span>
     </div>
@@ -1960,7 +1980,7 @@
           <li><span class="mono dim">04</span> playbook de cadência interna</li>
           <li><span class="mono dim">05</span> treino prático do squad</li>
         </ol>
-        <div class="sl-bottom mono dark"><span>groov.ia · /entrega</span><span>·</span></div>
+        <div class="sl-bottom mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · /entrega</span><span>·</span></div>
       </div>
       <span class="slide-label mono">07 · lista numerada</span>
     </div>
@@ -1972,7 +1992,7 @@
         <div class="sl-overlay">
           <div class="sl-top mono light"><span>[ /squad ]</span><span>08/12</span></div>
           <h3 class="sl-h-m light" style="color: rgb(99, 0, 255);"><span style="color: rgb(1, 205, 106);">quem opera<br>com a gente.</span></h3>
-          <div class="sl-bottom mono light"><span>groov.ia · time</span><span>2026</span></div>
+          <div class="sl-bottom mono light"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · time</span><span>2026</span></div>
         </div>
         <svg class="sl-mask-tl" viewBox="0 0 80 60" style="fill:var(--neon)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="40" width="20" height="20"></rect></svg>
       </div>
@@ -1986,7 +2006,7 @@
         <span class="sl-q-mark">“</span>
         <p class="sl-quote" style="font-size: 23px;">Em 90 dias passamos de pilotos <em style="font-size: 23px;">experimentais</em> para operação contínua. O método foi o que destravou.</p>
         <div class="sl-byline mono"><span class="ldot"></span><span>helena · cto · fintech case</span></div>
-        <div class="sl-bottom mono"><span>groov.ia · /case</span><span>·</span></div>
+        <div class="sl-bottom mono"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · /case</span><span>·</span></div>
       </div>
       <span class="slide-label mono">09 · citação</span>
     </div>
@@ -2006,7 +2026,7 @@
           <div class="cli-cell mono">[ logo · 07 ]</div>
           <div class="cli-cell mono">[ logo · 08 ]</div>
         </div>
-        <div class="sl-bottom mono dark"><span>groov.ia · /portfolio</span><span>·</span></div>
+        <div class="sl-bottom mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · /portfolio</span><span>·</span></div>
       </div>
       <span class="slide-label mono">10 · grid de clientes</span>
     </div>
@@ -2021,7 +2041,7 @@
           <div><span class="trio-n">3,8<small>x</small></span><span class="mono dim">produtividade</span></div>
           <div><span class="trio-n">+312<small>%</small></span><span class="mono dim">velocity ops</span></div>
         </div>
-        <div class="sl-bottom mono"><span>groov.ia · /resultados</span><span>·</span></div>
+        <div class="sl-bottom mono"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg> · /resultados</span><span>·</span></div>
       </div>
       <span class="slide-label mono">11 · trio de dados</span>
     </div>
@@ -2033,11 +2053,11 @@
         <h3 class="sl-title sl-close dark"><em>vamos</em><br>operar?</h3>
         <div class="sl-contact mono dark">
           <span>groov.ia/diagnostico</span>
-          <span>marco@groov.ia · +55 11 9 0000-0000</span>
+          <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0b666a7968644b6c7964647d25626a">[email&#160;protected]</a> · +55 11 9 0000-0000</span>
         </div>
         <svg class="sl-px sl-px-1" viewBox="0 0 80 80" style="fill:var(--noir)"><rect x="0" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="40" width="20" height="20"></rect><rect x="60" y="60" width="20" height="20"></rect></svg>
         <svg class="sl-px sl-px-2" viewBox="0 0 60 60" style="fill:var(--neon)"><rect x="0" y="20" width="20" height="20"></rect><rect x="20" y="0" width="20" height="20"></rect><rect x="20" y="20" width="20" height="20"></rect><rect x="40" y="20" width="20" height="20"></rect><rect x="20" y="40" width="20" height="20"></rect></svg>
-        <div class="sl-bottom mono dark"><span>groov.ia</span><span>·fim</span></div>
+        <div class="sl-bottom mono dark"><span><svg class="foot-logo" viewBox="0 0 490.39 139.55" role="img" aria-label="Groovia"><use href="#gia-logo"></use></svg></span><span>·fim</span></div>
       </div>
       <span class="slide-label mono">12 · fechamento</span>
     </div>
@@ -2433,7 +2453,7 @@
     <div>
       <span class="mono dim">[ end · brandbook v.2 · 2026 ]</span>
       <h2 class="closing-h"><em>opera</em><br>com a gente.</h2>
-      <p class="mono dim">documento vivo. revisões em groov.ia/brand · contato design@groov.ia</p>
+      <p class="mono dim">documento vivo. revisões em groov.ia/brand · contato <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6004051309070e2007120f0f164e0901">[email&#160;protected]</a></p>
     </div>
     <svg class="closing-mark" viewBox="0 0 490.39 139.55"><g>
         <path d="M76.07,110.47c0,17.62-15.1,29.09-38.31,29.09S-1.12,126.27.84,106.69h21.11c-.42,9.23,5.45,14.4,15.8,14.4,9.37,0,15.66-4.61,15.66-11.47s-5.45-11.05-15.38-11.05C14.96,98.58,0,84.88,0,63.62S15.66,28.95,37.89,28.95c5.59,0,10.91,1.12,15.66,3.36l8.11-10.07,16.08,11.61-9.23,10.77c4.75,5.45,6.99,11.47,6.99,19.02,0,10.35-5.17,19.3-14.12,24.89,9.37,4.19,14.68,12.03,14.68,21.95ZM54.12,63.62c0-9.79-6.43-16.22-16.22-16.22s-16.22,6.43-16.22,16.22,6.57,16.36,16.22,16.36,16.22-6.57,16.22-16.36Z"></path>
@@ -2448,7 +2468,7 @@
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function () {
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
